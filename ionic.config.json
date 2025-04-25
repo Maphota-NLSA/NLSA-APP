@@ -1,0 +1,7 @@
+{
+  "name": "NLSA-APP_FRONTEND",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
