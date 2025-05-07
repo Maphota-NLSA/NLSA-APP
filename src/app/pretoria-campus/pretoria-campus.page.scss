@@ -1,0 +1,86 @@
+.logo {
+    height: 40px;
+    margin-left: 10px;
+  }
+ 
+.email-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.email-icon {
+  font-size: 20px; 
+}
+
+a {
+  text-decoration: none; /* Removes underline from the link */
+  color: inherit; /* Keeps the text color the same as the rest of the page */
+}
+.schedule-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.day {
+  font-weight: 500;
+}
+
+.hours {
+  color: #555;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  margin-left: 2mm; 
+}
+
+.status-badge.open {
+  background-color: #28a745; // green
+}
+
+.status-badge.closed {
+  background-color: #dc3545; // red
+}
+
+.today {
+  font-weight: bold;
+}
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.custom-card {
+  flex: 1 1 45%; 
+  margin: 8px;
+  border-radius: 16px;
+  min-width: 300px;
+}
+.card-wrapper {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.icon{
+  font-size: 32px;
+  
+}
+.custom-card1 {
+  flex: 1 1 300px;
+  margin: 8px;
+  max-width: 400px;
+  align-items: center;
+  text-align: center;
+  
+}

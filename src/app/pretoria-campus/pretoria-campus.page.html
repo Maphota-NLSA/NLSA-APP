@@ -1,0 +1,105 @@
+<app-header></app-header>
+
+<ion-content>
+  
+  <div class="card-wrapper">
+
+    <ion-card class="custom-card">
+      <ion-card-header>
+        <ion-card-content>
+          <div id="map" style="height: 300px; width: 100%;"></div>
+        </ion-card-content> 
+      </ion-card-header>
+      <ion-card-content>
+        <ion-card-title style="text-align: center">Operating Hours</ion-card-title>
+        <div *ngFor="let item of schedule">
+          <div [ngClass]="{ 'today': item.isToday }" class="schedule-row">
+            <span class="day">{{ item.day }}</span>
+             <span *ngIf="item.isToday" 
+                [ngClass]="{
+                  'status-badge': true,
+                  'open': item.status?.startsWith('Open'),
+                  'closed': item.status?.startsWith('Closed')
+                }">
+            {{ item.status }}
+          </span>
+            <span *ngIf="!item.isToday" class="hours">{{ item.hours }}</span>
+          </div>
+        </div>
+      </ion-card-content>
+      </ion-card>
+
+  <ion-card class="custom-card">
+    <ion-card-header>
+      <ion-card-title>Pretoria Campus</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="email-container"style="color: red;">
+      <ion-icon name="alert-outline" class="email-icon" ></ion-icon>
+Proof of identification is required to enter the library
+    </ion-card-content>
+    <ion-card-content>
+      228 Johannes Ramokhoase Street<br>
+      Pretoria<br>0001<br>South Africa
+    </ion-card-content>
+
+    <ion-card-content>
+      Public Entrance<br>
+      75 Thabo Sehume Street<br>Pretoria<br>0001<br>South Africa
+    </ion-card-content>
+
+    <ion-card-content>
+      GPS Co-ordinates<br>
+      25°44’34.0"S 28°11’22.0"E
+    </ion-card-content>
+
+    <ion-card-content class="email-container">
+      <ion-icon name="mail-outline" class="email-icon"></ion-icon>
+      <a href="mailto:infodesk@nlsa.ac.za">Email: infodesk&#64;nlsa.ac.za</a>
+    </ion-card-content>
+    <ion-card-content class="email-container">
+      <ion-icon name="call-outline" class="email-icon"></ion-icon>
+      <a href="tel:0124019700">012 401 9700</a>
+    </ion-card-content>
+  </ion-card>
+
+    </div> 
+<p style="text-align: center">Getting to the library</p>
+    <div class="card-row">
+      <ion-card class="custom-card1">
+        <ion-card-header>
+          <p style="text-align: center;"><ion-icon name="bus-outline" class="icon"></ion-icon></p>
+          <ion-card-title>By Tshwane Bus</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          If you are taking the bus to the national library, you can use the Tshwane Bus Services. For more information on bus routes and schedules, please visit the Tshwane Bus Services website.
+        <br><ion-button><a href="https://www.tshwane.gov.za/?page_id=723">Bus Timetable</a></ion-button>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="custom-card1">
+        <ion-card-header>
+          <p style="text-align: center;"><ion-icon name="bus-outline" class="icon"></ion-icon></p>
+          <ion-card-title>By Gau-Bus</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          If you are taking the bus to the national library, you can use the Gau-Bus Services.
+           For more information on bus routes and schedules, please visit the Gau-Bus Services website.
+          <br><ion-button><a href="https://www.gautrain.co.za/commuter/schedule">Bus Timetable</a></ion-button>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="custom-card1">
+        <ion-card-header>
+          <p style="text-align: center;"><ion-icon name="car-outline" class="icon"></ion-icon></p>
+          <ion-card-title>By Car</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          For those arriving by car, the National Library is accessible via the following GPS coordinates:25°44’34.0"S 28°11’22.0"E
+          <br><ion-button><a href="https://www.google.com/maps/place/228+Johannes+Ramokhoase+St,+Pretoria+Central,+Pretoria,+0002/@-25.742806,28.189612,16z/data=!4m6!3m5!1s0x1e95620e649a629b:0xaa29eda2c9030208!8m2!3d-25.7431048!4d28.1891769!16s%2Fg%2F11b8v5w2ss?hl=en-US&entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D">Google Map</a></ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+      
+  </ion-content>
+  
+
