@@ -1,0 +1,123 @@
+<app-header></app-header>
+
+<ion-content>
+  <p style="text-align: center"><strong >Plan your visit to Cape Town Campus</strong></p>
+  <div class="card-wrapper">
+
+    <ion-card class="custom-card">
+      <ion-card-header>
+        <ion-card-content>
+          <div id="map" style="height: 300px; width: 100%;"></div>
+        </ion-card-content> 
+      </ion-card-header>
+      <ion-card-content>
+        <ion-card-title style="text-align: center">Operating Hours</ion-card-title>
+        <div *ngFor="let item of schedule">
+          <div [ngClass]="{ 'today': item.isToday }" class="schedule-row">
+            <span class="day">{{ item.day }}</span>
+             <span *ngIf="item.isToday" 
+                [ngClass]="{
+                  'status-badge': true,
+                  'open': item.status?.startsWith('Open'),
+                  'closed': item.status?.startsWith('Closed')
+                }">
+            {{ item.status }}
+          </span>
+            <span *ngIf="!item.isToday" class="hours">{{ item.hours }}</span>
+          </div>
+        </div>
+      </ion-card-content>
+      </ion-card>
+
+  <ion-card class="custom-card">
+    <ion-card-header>
+      <ion-card-title>Cape Town Campus</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="email-container"style="color: red;">
+      <ion-icon name="alert-outline" class="email-icon" ></ion-icon>
+Proof of identification is required to enter the library
+    </ion-card-content>
+
+    <ion-card-content>
+      5 Queen Victoria Street<br>
+      Cape Town<br>
+      8000<br>
+      South Africa<br>
+    </ion-card-content>
+
+    <ion-card-content>
+      GPS Co-ordinates<br>
+      33°55’30.1"S 18°25’06.4"E
+    </ion-card-content>
+
+    <ion-card-content class="email-container">
+      <ion-icon name="mail-outline" class="email-icon"></ion-icon>
+      <a href="mailto:info@nlsa.ac.za">Email: info&#64;nlsa.ac.za</a>
+    </ion-card-content>
+    <ion-card-content class="email-container">
+      <ion-icon name="call-outline" class="email-icon"></ion-icon>
+      <a href="tel:021 424 6320">021 424 6320</a>
+    </ion-card-content>
+  </ion-card>
+
+    </div> 
+<p style="text-align: center">Getting to the library</p>
+    <div class="card-wrapper">
+      <ion-card class="custom-card1">
+        <ion-card-header>
+          <p style="text-align: center;"><ion-icon name="bus-outline" class="icon"></ion-icon></p>
+          <ion-card-title>By Bus</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          The library is well located within Cape Town, a short distance from many city attractions. For those wishing to take the bus to the National Library of South Africa, the MyCiti bus offers a convenient and affordable option.
+        <br><ion-button><a href="https://www.myciti.org.za/en/home/">Bus Timetable</a></ion-button>
+        </ion-card-content>
+      </ion-card>
+
+
+      <ion-card class="custom-card1">
+        <ion-card-header>
+          <p style="text-align: center;"><ion-icon name="car-outline" class="icon"></ion-icon></p>
+          <ion-card-title>By Car</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          For those arriving by car, the National Library is accessible via the following GPS coordinates: 33°55’30.1"S 18°25’06.4"E
+          <br><ion-button><a href="https://www.google.com/maps/place/5+Queen+Victoria+St,+Cape+Town+City+Centre,+Cape+Town,+6665/@-33.9251271,18.4185478,20.53z/data=!4m6!3m5!1s0x1dcc67651d1d1a33:0x6aa8011cf4fc1573!8m2!3d-33.925089!4d18.4185269!16s%2Fg%2F11rp3nm5s5?hl=en-US&entry=ttu&g_ep=EgoyMDI1MDQyNy4xIKXMDSoASAFQAw%3D%3D">Google Map</a></ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <ion-accordion-group>
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label>From the N1 Highway</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <ul>
+            <li>Take Exit 12 towards Cape Town Centre/Sea Point.</li>
+            <li>Turn left onto National Highway 1.</li>
+              <li>Turn right onto Wale Street.</li>
+              <li>The library is located on the right-hand side of the street</li>
+            </ul>
+        </div>
+      </ion-accordion>
+      <ion-accordion value="second">
+        <ion-item slot="header" color="light">
+          <ion-label>From the M3 Highway</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <ul>
+              <li>Take Exit 10 towards Cape Town Centre.</li>
+              <li>Turn left onto Somerset Road.</li>
+              <li>Turn right onto Darling Street.</li>
+              <li>Turn left onto Queen Victoria Street.</li>
+              <li>Turn right onto Wale Street.</li>
+              <li>The library is located on the right-hand side of the street.</li>
+            </ul>
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+      
+  </ion-content>
+  
+

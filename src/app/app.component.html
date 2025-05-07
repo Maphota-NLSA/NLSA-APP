@@ -15,7 +15,7 @@
     <ion-content>
       <ion-list>
         <ion-accordion-group>
-        <ion-item>
+        <ion-item button (click)="navigateToHome()">
       <ion-icon name="home-outline" slot="start"></ion-icon>
       <ion-label>Home</ion-label>
     </ion-item>
@@ -35,13 +35,13 @@
         </ion-item>
         <div slot="content">
           <ion-list>
-            <ion-item>
+            <ion-item button (click)="navigateToPretoria()">
               <ion-icon name="business-outline" slot="start"></ion-icon>
               <ion-label>Pretoria Campus</ion-label>
             </ion-item>
-            <ion-item>
+            <ion-item button (click)="navigateToCapeTown()">
               <ion-icon name="business-outline" slot="start"></ion-icon>
-              <ion-label>Cape Town Campus</ion-label>
+              <ion-label >Cape Town Campus</ion-label>
             </ion-item>
           </ion-list>
         </div>
