@@ -8,6 +8,7 @@ import { PretoriaCampusPageRoutingModule } from './pretoria-campus-routing.modul
 
 import { PretoriaCampusPage } from './pretoria-campus.page';
 import { HeaderPageModule } from '../header/header.module';
+import { FooterPageModule } from '../footer/footer.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { HeaderPageModule } from '../header/header.module';
     FormsModule,
     IonicModule,
     PretoriaCampusPageRoutingModule,
-    HeaderPageModule 
+    HeaderPageModule,
+    FooterPageModule 
   ],
   declarations: [PretoriaCampusPage]
 

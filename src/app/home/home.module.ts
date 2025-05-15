@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { HeaderPageModule } from '../header/header.module';
+import { FooterPageModule } from '../footer/footer.module';
 
 
 
@@ -15,7 +16,8 @@ import { HeaderPageModule } from '../header/header.module';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    HeaderPageModule
+    HeaderPageModule,
+    FooterPageModule
   ],
   declarations: [HomePage]  
 })

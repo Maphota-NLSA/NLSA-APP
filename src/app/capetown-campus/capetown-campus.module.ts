@@ -8,6 +8,7 @@ import { CapetownCampusPageRoutingModule } from './capetown-campus-routing.modul
 
 import { CapetownCampusPage } from './capetown-campus.page';
 import { HeaderPageModule } from '../header/header.module';
+import { FooterPageModule } from '../footer/footer.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HeaderPageModule } from '../header/header.module';
     FormsModule,
     IonicModule,
     CapetownCampusPageRoutingModule,
-    HeaderPageModule
+    HeaderPageModule,
+    FooterPageModule
   ],
   declarations:[CapetownCampusPage]
 })

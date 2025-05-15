@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'capetown-campus',
     loadChildren: () => import('./capetown-campus/capetown-campus.module').then( m => m.CapetownCampusPageModule)
   },
+  {
+    path: 'footer',
+    loadChildren: () => import('./footer/footer.module').then( m => m.FooterPageModule)
+  },
 ];
 
 @NgModule({
