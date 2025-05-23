@@ -33,10 +33,23 @@ const routes: Routes = [
   {
     path: 'capetown-campus',
     loadChildren: () => import('./capetown-campus/capetown-campus.module').then( m => m.CapetownCampusPageModule)
+  },
+  {
+    path: 'bibliographic-services',
+    loadChildren: () => import('./bibliographic-services/bibliographic-services.module').then( m => m.BibliographicServicesPageModule)
+  },
+  {
+    path: 'preservation-services',
+    loadChildren: () => import('./preservation-services/preservation-services.module').then( m => m.PreservationServicesPageModule)
+  },
+  {
+    path: 'outreach',
+    loadChildren: () => import('./outreach/outreach.module').then( m => m.OutreachPageModule)
   },{
     path: '**',
     redirectTo: 'home' // fallback for unknown paths
   }
+
 ];
 
 @NgModule({
