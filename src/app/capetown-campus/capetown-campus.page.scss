@@ -70,6 +70,7 @@ a {
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 16px 0;
 }
 .icon{
   font-size: 32px;
@@ -81,4 +82,7 @@ a {
   align-items: center;
   text-align: center;
   
+}
+.accordion-group-bordered {
+  border: 2px solid #cccccc;  
 }

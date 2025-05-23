@@ -4,22 +4,21 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CapetownCampusPageRoutingModule } from './capetown-campus-routing.module';
+import { InformationAccessPageRoutingModule } from './information-access-routing.module';
 
-import { CapetownCampusPage } from './capetown-campus.page';
+import { InformationAccessPage } from './information-access.page';
 import { HeaderPageModule } from '../header/header.module';
 import { FooterPageModule } from '../footer/footer.module';
-
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CapetownCampusPageRoutingModule,
+    InformationAccessPageRoutingModule,
     HeaderPageModule,
-    FooterPageModule
+    FooterPageModule,
   ],
-  declarations:[CapetownCampusPage]
+  declarations: [InformationAccessPage]
 })
-export class CapetownCampusPageModule {}
+export class InformationAccessPageModule {}

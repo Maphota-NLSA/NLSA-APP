@@ -1,0 +1,25 @@
+.footer-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+  
+    .social-icons {
+      margin-bottom: 10px;
+  
+      a {
+        margin: 0 10px;
+        font-size: 24px;
+  
+        .facebook { color: #3b5998; }
+        .instagram { color: #333; }
+        .twitter { color: #1da1f2; }
+        .youtube { color: #ff0000; }
+      }
+    }
+  
+    .footer-text {
+      font-size: 14px;
+      
+      text-align: center;
+    }
+  }
+  

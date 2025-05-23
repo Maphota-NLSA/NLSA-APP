@@ -45,10 +45,22 @@ const routes: Routes = [
   {
     path: 'outreach',
     loadChildren: () => import('./outreach/outreach.module').then( m => m.OutreachPageModule)
-  },{
+  },
+  {
+    path: 'information-access',
+    loadChildren: () => import('./information-access/information-access.module').then( m => m.InformationAccessPageModule)
+  },
+  {
+    path: 'footer',
+    loadChildren: () => import('./footer/footer.module').then( m => m.FooterPageModule)
+  },
+{
     path: '**',
     redirectTo: 'home' // fallback for unknown paths
-  }
+  },
+  
+  
+  
 
 ];
 
