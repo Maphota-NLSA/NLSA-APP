@@ -24,28 +24,32 @@
                         </ion-item>
 
                         <!-- Core Programmes -->
-                        <!-- <ion-accordion value="core-programmes"> -->
-                        <ion-item routerLink="/app-bibliographic-services" routerDirection="root" (click)="closeMenu()">
-                            <ion-icon name="layers-outline" slot="start"></ion-icon>
-                            <ion-label>Our Core Programmes</ion-label>
-                        </ion-item>
-                        <div slot="content">
-                            <ion-list>
-                                <ion-item button (click)="navigateToPretoria()">
-                                    <ion-icon name="business-outline" slot="start"></ion-icon>
-                                    <ion-label>Bibliographic Services</ion-label>
-                                </ion-item>
-                                <ion-item button (click)="navigateToCapeTown()">
-                                    <ion-icon name="business-outline" slot="start"></ion-icon>
-                                    <ion-label>Information Access Services</ion-label>
-                                </ion-item>
-                                <ion-item button (click)="navigateToCapeTown()">
-                                    <ion-icon name="business-outline" slot="start"></ion-icon>
-                                    <ion-label>Preservation and Conservation Services</ion-label>
-                                </ion-item>
-                            </ion-list>
-                        </div>
-                        <!-- </ion-accordion> -->
+                        <ion-accordion value="core-programmes">
+                          <ion-item slot="header">
+                              <ion-icon name="layers-outline" slot="start"></ion-icon>
+                              <ion-label>Our Core Programmes</ion-label>
+                          </ion-item>
+                          <div slot="content">
+                              <ion-list>
+                                  <ion-item routerLink="/bibliographic-services" routerDirection="root" (click)="closeMenu()">
+                                      <ion-icon name="business-outline" slot="start"></ion-icon>
+                                      <ion-label>Bibliographic Services</ion-label>
+                                  </ion-item>
+                                  <ion-item routerLink="/information-access" routerDirection="root" (click)="closeMenu()">
+                                      <ion-icon name="business-outline" slot="start"></ion-icon>
+                                      <ion-label>Information Access Services</ion-label>
+                                  </ion-item>
+                                  <ion-item routerLink="/preservation-services" routerDirection="root" (click)="closeMenu()">
+                                      <ion-icon name="business-outline" slot="start"></ion-icon>
+                                      <ion-label>Preservation and Conservation Services</ion-label>
+                                  </ion-item>
+                                  <ion-item routerLink="/outreach" routerDirection="root" (click)="closeMenu()">
+                                      <ion-icon name="business-outline" slot="start"></ion-icon>
+                                      <ion-label>Outreach</ion-label>
+                                  </ion-item>
+                              </ion-list>
+                          </div>
+                        </ion-accordion>
 
                         <!-- Using the Library -->
                         <ion-item routerLink="/using-library" routerDirection="root" (click)="closeMenu()">

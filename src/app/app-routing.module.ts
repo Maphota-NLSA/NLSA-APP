@@ -33,10 +33,8 @@ const routes: Routes = [
   {
     path: 'capetown-campus',
     loadChildren: () => import('./capetown-campus/capetown-campus.module').then( m => m.CapetownCampusPageModule)
-  },{
-    path: '**',
-    redirectTo: 'home' // fallback for unknown paths
-  },  {
+  },
+  {
     path: 'bibliographic-services',
     loadChildren: () => import('./bibliographic-services/bibliographic-services.module').then( m => m.BibliographicServicesPageModule)
   },
@@ -47,6 +45,9 @@ const routes: Routes = [
   {
     path: 'outreach',
     loadChildren: () => import('./outreach/outreach.module').then( m => m.OutreachPageModule)
+  },{
+    path: '**',
+    redirectTo: 'home' // fallback for unknown paths
   }
 
 ];
