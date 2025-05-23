@@ -18,20 +18,6 @@ export class AppComponent {
     window.open(url, '_blank');
   }
 
-  navigateToHome() {
-    this.router.navigate(['/home']);
-    this.closeMenu();
-  }
-
-  navigateToPretoria() {
-    this.router.navigate(['/pretoria-campus']);
-    this.closeMenu();
-  }
-
-  navigateToCapeTown() {
-    this.router.navigate(['/capetown-campus']);
-    this.closeMenu();
-  }
 
   closeMenu() {
     this.menuCtrl.isOpen('main-menu').then(isOpen => {

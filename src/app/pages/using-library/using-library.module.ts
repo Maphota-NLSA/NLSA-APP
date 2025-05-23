@@ -7,13 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { UsingLibraryPageRoutingModule } from './using-library-routing.module';
 
 import { UsingLibraryPage } from './using-library.page';
+import { FooterPageModule } from 'src/app/footer/footer.module';
+import { HeaderPageModule } from 'src/app/header/header.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    UsingLibraryPageRoutingModule
+    UsingLibraryPageRoutingModule,
+    FooterPageModule,
+    HeaderPageModule,
   ],
   declarations: [UsingLibraryPage]
 })

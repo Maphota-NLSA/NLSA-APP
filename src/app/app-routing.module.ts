@@ -33,14 +33,22 @@ const routes: Routes = [
   {
     path: 'capetown-campus',
     loadChildren: () => import('./capetown-campus/capetown-campus.module').then( m => m.CapetownCampusPageModule)
-  },{
-    path: '**',
-    redirectTo: 'home' // fallback for unknown paths
-  }
+  },
+  {
+    path: 'information-access',
+    loadChildren: () => import('./information-access/information-access.module').then( m => m.InformationAccessPageModule)
+  },
   {
     path: 'footer',
     loadChildren: () => import('./footer/footer.module').then( m => m.FooterPageModule)
   },
+{
+    path: '**',
+    redirectTo: 'home' // fallback for unknown paths
+  },
+  
+  
+  
 ];
 
 @NgModule({

@@ -1,8 +1,13 @@
 <app-header></app-header>
 
 <ion-content>
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Plan your visit to Cape Town Campus</ion-title>
+    </ion-toolbar>
+  </ion-header>
   <div>
-  <p style="text-align: center"><strong >Plan your visit to Cape Town Campus</strong></p>
+ 
   <div class="card-wrapper">
 
     <ion-card class="custom-card">
@@ -62,7 +67,7 @@ Proof of identification is required to enter the library
   </ion-card>
 
     </div> 
-<p style="text-align: center">Getting to the library</p>
+<ion-title style="text-align: center;">Getting to the library</ion-title>
     <div class="card-wrapper">
       <ion-card class="custom-card1">
         <ion-card-header>
@@ -88,7 +93,7 @@ Proof of identification is required to enter the library
       </ion-card>
     </div>
 
-    <ion-accordion-group>
+    <ion-accordion-group class="accordion-group-bordered" style="margin: 16px 0;">
       <ion-accordion value="first">
         <ion-item slot="header" color="light">
           <ion-label>From the N1 Highway</ion-label>
