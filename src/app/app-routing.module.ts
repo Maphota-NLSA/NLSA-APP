@@ -36,7 +36,19 @@ const routes: Routes = [
   },{
     path: '**',
     redirectTo: 'home' // fallback for unknown paths
+  },  {
+    path: 'bibliographic-services',
+    loadChildren: () => import('./bibliographic-services/bibliographic-services.module').then( m => m.BibliographicServicesPageModule)
+  },
+  {
+    path: 'preservation-services',
+    loadChildren: () => import('./preservation-services/preservation-services.module').then( m => m.PreservationServicesPageModule)
+  },
+  {
+    path: 'outreach',
+    loadChildren: () => import('./outreach/outreach.module').then( m => m.OutreachPageModule)
   }
+
 ];
 
 @NgModule({
