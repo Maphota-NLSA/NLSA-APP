@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { PreservationServicesPageRoutingModule } from './preservation-services-routing.module';
 
 import { PreservationServicesPage } from './preservation-services.page';
+import { FooterPageModule } from "../footer/footer.module";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PreservationServicesPageRoutingModule
-  ],
+    PreservationServicesPageRoutingModule,
+    FooterPageModule
+],
   declarations: [PreservationServicesPage]
 })
 export class PreservationServicesPageModule {}

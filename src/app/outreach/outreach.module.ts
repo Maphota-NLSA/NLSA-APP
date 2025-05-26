@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { OutreachPageRoutingModule } from './outreach-routing.module';
 
 import { OutreachPage } from './outreach.page';
+import { FooterPageModule } from "../footer/footer.module";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    OutreachPageRoutingModule
-  ],
+    OutreachPageRoutingModule,
+    FooterPageModule
+],
   declarations: [OutreachPage]
 })
 export class OutreachPageModule {}
