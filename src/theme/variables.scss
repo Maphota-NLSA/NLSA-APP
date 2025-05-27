@@ -1,2 +1,11 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+/**light ***/
+*{
+--ion-color-light: #f4f5f8;
+--ion-color-light-rgb: 244, 244, 244;
+--ion-color-light-contrast: #000000;
+--ion-color-light-contrast-rgb: 0, 0, 0;
+--ion-color-light-shade: #d7d8da;
+--ion-color-color-light-tint: #f5f6f9;
+}
