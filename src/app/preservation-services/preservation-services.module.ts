@@ -8,6 +8,7 @@ import { PreservationServicesPageRoutingModule } from './preservation-services-r
 
 import { PreservationServicesPage } from './preservation-services.page';
 import { FooterPageModule } from "../footer/footer.module";
+import { HeaderPageModule } from "../header/header.module";
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { FooterPageModule } from "../footer/footer.module";
     FormsModule,
     IonicModule,
     PreservationServicesPageRoutingModule,
-    FooterPageModule
+    FooterPageModule,
+    HeaderPageModule
 ],
   declarations: [PreservationServicesPage]
 })

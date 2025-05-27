@@ -8,6 +8,7 @@ import { BibliographicServicesPageRoutingModule } from './bibliographic-services
 import { BibliographicServicesPage } from './bibliographic-services.page';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FooterPageModule } from "../footer/footer.module";
+import { HeaderPageModule } from "../header/header.module";
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { FooterPageModule } from "../footer/footer.module";
     IonicModule,
     HttpClientModule,
     BibliographicServicesPageRoutingModule,
-    FooterPageModule
+    FooterPageModule,
+    HeaderPageModule
 ],
   declarations: [BibliographicServicesPage]
 })
