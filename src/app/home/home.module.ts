@@ -7,6 +7,7 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { HeaderPageModule } from '../header/header.module';
 import { FooterPageModule } from '../footer/footer.module';
+import { SwiperComponent } from "../swiper/swiper.component";
 
 
 
@@ -17,8 +18,9 @@ import { FooterPageModule } from '../footer/footer.module';
     IonicModule,
     HomePageRoutingModule,
     HeaderPageModule,
-    FooterPageModule
-  ],
+    FooterPageModule,
+    SwiperComponent
+],
   declarations: [HomePage]  
 })
 export class HomePageModule {}
