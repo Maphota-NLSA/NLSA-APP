@@ -8,6 +8,7 @@ import { OutreachPageRoutingModule } from './outreach-routing.module';
 
 import { OutreachPage } from './outreach.page';
 import { FooterPageModule } from "../footer/footer.module";
+import { HeaderPageModule } from "../header/header.module";
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { FooterPageModule } from "../footer/footer.module";
     FormsModule,
     IonicModule,
     OutreachPageRoutingModule,
-    FooterPageModule
+    FooterPageModule,
+    HeaderPageModule
 ],
   declarations: [OutreachPage]
 })
