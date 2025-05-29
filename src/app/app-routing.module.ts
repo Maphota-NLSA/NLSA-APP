@@ -54,12 +54,14 @@ const routes: Routes = [
     path: 'footer',
     loadChildren: () => import('./footer/footer.module').then( m => m.FooterPageModule)
   },
-{
+  {
+    path: 'search-discovery',
+    loadChildren: () => import('./search-discovery/search-discovery.module').then( m => m.SearchDiscoveryPageModule)
+  },
+   {
     path: '**',
     redirectTo: 'home' // fallback for unknown paths
-  },
-  
-  
+  },  
   
 
 ];

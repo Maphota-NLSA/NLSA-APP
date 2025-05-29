@@ -1,0 +1,105 @@
+<app-header></app-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="logo">NLSA Search</span>
+    </div>
+    <div class="nav-right">
+      <button class="login-btn" (click)="redirectToOCLC()">Login to OCLC</button>
+    </div>
+  </nav>
+
+  <!-- Headline -->
+  <h2>Search National Library of South Africa and beyond</h2>
+
+  <!-- Search Input -->
+  <ion-item>
+    <ion-input placeholder="Search..." [(ngModel)]="searchQuery"></ion-input>
+    <ion-button slot="end" (click)="performSearch()">
+      <ion-icon name="search-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
+
+  <!-- Actions: Advanced Search & Dropdown -->
+  <div class="search-actions">
+    <ion-button fill="clear" color="medium" (click)="openAdvancedSearch()">
+      Advanced search
+    </ion-button>
+
+    <div class="dropdown"
+         (mouseenter)="onDropdownMouseEnter()"
+         (mouseleave)="onDropdownMouseLeave()">
+      <button class="dropbtn" (click)="toggleDropdown()">Resources ▾</button>
+      <div class="dropdown-content" *ngIf="showDropdown">
+        <a href="http://www.nlsa.ac.za/index.php?option=com_content&view=frontpage&Itemid=103" target="_blank">NLSA Home</a>
+        <a href="https://cdn.sabinet.co.za/images/worldcatlocal/NLSA/asklibrarian.php" target="_blank">Ask-a-Librarian</a>
+        <a href="http://nlsa.on.worldcat.org/atoztitles" target="_blank">A-Z eResources</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Partners Section -->
+<div class="partners-section">
+  <h2 class="partners-title">Our Partners</h2>
+  <p class="partners-subtitle">
+    The National Library of South Africa cares for over 12 million items. Find out more about our Partners.
+  </p>
+
+  <div class="partners-grid">
+    <a href="https://aflia.net/" target="_blank">
+      <img src="assets/partners/aflia.png" alt="AfLIA" />
+    </a>
+    <a href="https://www.codesria.org/" target="_blank">
+      <img src="assets/partners/codesria.png" alt="CODESRIA" />
+    </a>
+    <a href="https://www.codesria.org/" target="_blank">
+      <img src="assets/partners/codesria.png" alt="CODESRIA" />
+    </a>
+    <a href="https://www.codesria.org/" target="_blank">
+      <img src="assets/partners/codesria.png" alt="CODESRIA" />
+    </a>
+        <a href="https://www.codesria.org/" target="_blank">
+      <img src="assets/partners/codesria.png" alt="CODESRIA" />
+    </a>
+        <a href="https://www.codesria.org/" target="_blank">
+      <img src="assets/partners/codesria.png" alt="CODESRIA" />
+    </a>
+        <a href="https://www.codesria.org/" target="_blank">
+      <img src="assets/partners/codesria.png" alt="CODESRIA" />
+    </a>
+        <a href="https://www.codesria.org/" target="_blank">
+      <img src="assets/partners/codesria.png" alt="CODESRIA" />
+    </a>
+        <a href="https://www.codesria.org/" target="_blank">
+      <img src="assets/partners/codesria.png" alt="CODESRIA" />
+    </a>
+        <a href="https://www.codesria.org/" target="_blank">
+      <img src="assets/partners/codesria.png" alt="CODESRIA" />
+    </a>
+        <a href="https://www.codesria.org/" target="_blank">
+      <img src="assets/partners/codesria.png" alt="CODESRIA" />
+    </a>
+        <a href="https://www.codesria.org/" target="_blank">
+      <img src="assets/partners/codesria.png" alt="CODESRIA" />
+    </a>
+        <a href="https://www.codesria.org/" target="_blank">
+      <img src="assets/partners/codesria.png" alt="CODESRIA" />
+    </a>
+        <a href="https://www.codesria.org/" target="_blank">
+      <img src="assets/partners/codesria.png" alt="CODESRIA" />
+    </a>
+        <a href="https://www.codesria.org/" target="_blank">
+      <img src="assets/partners/codesria.png" alt="CODESRIA" />
+    </a>
+        <a href="https://www.codesria.org/" target="_blank">
+      <img src="assets/partners/codesria.png" alt="CODESRIA" />
+    </a>
+    <!-- We can add more parners here -->
+  </div>
+</div>
+
+<app-footer></app-footer>
+</ion-content>

@@ -1,15 +1,18 @@
 <ion-header>
   <ion-toolbar class="custom-header">
     <ion-buttons slot="start">
-      <img src="assets/LogoL.jpeg" alt="NLSA Logo" class="logo">
+      <ion-button fill="clear" routerLink="/home" class="logo-button">
+        <img src="assets/LogoL.jpeg" alt="NLSA Logo" class="logo" />
+      </ion-button>
     </ion-buttons>
+
+    <ion-title class="app-title">NLSA</ion-title>
+
     <ion-buttons slot="end">
       <ion-button fill="clear">
         <ion-icon name="search-outline"></ion-icon>
       </ion-button>
-      <ion-menu-button menu="main-menu" fill="solid"></ion-menu-button>
+      <ion-menu-button menu="main-menu" autoHide="false"></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
- 
