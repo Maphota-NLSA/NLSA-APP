@@ -61,7 +61,11 @@ const routes: Routes = [
    {
     path: '**',
     redirectTo: 'home' // fallback for unknown paths
-  },  
+  },   {
+    path: 'nlsa-contact',
+    loadChildren: () => import('./pages/nlsa-contact/nlsa-contact.module').then( m => m.NlsaContactPageModule)
+  },
+ 
   
 
 ];
