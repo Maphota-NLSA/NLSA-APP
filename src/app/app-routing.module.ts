@@ -63,9 +63,13 @@ const routes: Routes = [
     loadChildren: () => import('./pages/nlsa-contact/nlsa-contact.module').then( m => m.NlsaContactPageModule)
   },
    {
+    path: 'history',
+    loadChildren: () => import('./history/history.module').then( m => m.HistoryPageModule)
+  },
+   {
     path: '**',
     redirectTo: 'home' // fallback for unknown paths
-  },
+  },  
  
   
 

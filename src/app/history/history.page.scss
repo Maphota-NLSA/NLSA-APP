@@ -1,0 +1,22 @@
+ion-card {
+  margin-bottom: 16px;
+  background: transparent !important;
+  box-shadow: none;
+  justify-content: center; 
+  align-items: center;
+}
+.image-row {
+  display: flex;
+  gap: 10px; /* Adjust the space between images */
+  padding: 20px;
+  flex-wrap: nowrap;
+  justify-content: center; /* Optional: centers images horizontally */
+}
+
+.image-row img {
+  max-width: 100%;
+  height: auto;
+  flex: 1 1 0;
+  border-radius: 5px;
+}
+
