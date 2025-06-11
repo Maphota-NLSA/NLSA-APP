@@ -58,12 +58,13 @@ const routes: Routes = [
     path: 'search-discovery',
     loadChildren: () => import('./search-discovery/search-discovery.module').then( m => m.SearchDiscoveryPageModule)
   },
+     {
+    path: 'nlsa-contact',
+    loadChildren: () => import('./pages/nlsa-contact/nlsa-contact.module').then( m => m.NlsaContactPageModule)
+  },
    {
     path: '**',
     redirectTo: 'home' // fallback for unknown paths
-  },   {
-    path: 'nlsa-contact',
-    loadChildren: () => import('./pages/nlsa-contact/nlsa-contact.module').then( m => m.NlsaContactPageModule)
   },
  
   
