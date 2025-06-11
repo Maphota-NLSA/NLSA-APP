@@ -9,9 +9,11 @@
     <ion-title class="app-title">NLSA</ion-title>
 
     <ion-buttons slot="end">
-      <ion-button fill="clear">
+      <!-- Redirecting search button to WorldCat Discovery search page -->
+      <ion-button fill="clear" (click)="openSearch()">
         <ion-icon name="search-outline"></ion-icon>
       </ion-button>
+
       <ion-menu-button menu="main-menu" autoHide="false"></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>

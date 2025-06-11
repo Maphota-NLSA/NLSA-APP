@@ -1,0 +1,108 @@
+<app-header></app-header>
+
+<ion-content class="ion-padding nlsa-contact-page">
+
+  <ion-content class="ion-padding">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Contact us</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Page Title -->
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">National Library of South Africa</ion-card-title>
+      <ion-card-subtitle class="ion-text-center">
+        Open Mon, Tues, Thurs, Fri: 08H00 - 17H00
+      </ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+  <!-- Navigation Links 
+  <ion-list inset lines="full">
+    <ion-item routerLink="/home">Home</ion-item>
+    <ion-item routerLink="/search-discovery">Search Library</ion-item>
+    <ion-item routerLink="/using-library">Using the Library</ion-item>
+    <ion-item routerLink="/nlsa-contact">Contact Us</ion-item>
+  </ion-list>-->
+
+  <!-- Operational Hours -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title><ion-icon name="time-outline"></ion-icon> Operational Hours</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Mon, Tues, Thurs, Fri:</strong> 08H00 to 17H00</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Contact Form -->
+  <form #contactForm="ngForm" (ngSubmit)="sendMessage()">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-icon name="mail-outline"></ion-icon> Write to us</ion-card-title>
+        <ion-card-subtitle>Contact us today using this form and we will reach you asap.</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Name</ion-label>
+          <ion-input type="text" required [(ngModel)]="contact.name" name="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" required [(ngModel)]="contact.email" name="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Subject</ion-label>
+          <ion-input type="text" required [(ngModel)]="contact.subject" name="subject"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Write your message...</ion-label>
+          <ion-textarea required [(ngModel)]="contact.message" name="message"></ion-textarea>
+        </ion-item>
+
+        <ion-button expand="block" color="primary" type="submit" [disabled]="!contactForm.valid">
+          Send Message
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </form>
+
+  <!-- Pretoria Campus -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title><ion-icon name="location-outline"></ion-icon> Pretoria Campus</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Address:</strong><br>228 Johannes Ramokhoase Street, Pretoria, 0001</p>
+      <p><strong>Public Entrance:</strong><br>75 Thabo Sehume Street</p>
+      <p><strong>Postal:</strong><br>Private Bag X990</p>
+      <p><strong>GPS:</strong> 25°44'08.0"S 28°11'22.6"E</p>
+      <p><ion-icon name="mail-outline"></ion-icon> infodesk&#64;nlsa.ac.za</p>
+      <p><ion-icon name="call-outline"></ion-icon> 012 401 9700</p>
+      <ion-button fill="outline" expand="block" href="https://maps.google.com/?q=75+Thabo+Sehume+Street,+Pretoria" target="_blank">Get Direction</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Cape Town Campus -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title><ion-icon name="location-outline"></ion-icon> Cape Town Campus</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Address:</strong><br>5 Queen Victoria Street, Cape Town, 8000</p>
+      <p><strong>Postal:</strong><br>P.O Box 496</p>
+      <p><strong>GPS:</strong> 33°55'29.2"S 18°25'06.4"E</p>
+      <p><ion-icon name="mail-outline"></ion-icon> infodesk&#64;nlsa.ac.za</p>
+      <p><ion-icon name="call-outline"></ion-icon> 021 487 5600</p>
+      <ion-button fill="outline" expand="block" href="https://maps.google.com/?q=5+Queen+Victoria+Street,+Cape+Town" target="_blank">Get Direction</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+<app-footer></app-footer>
+
