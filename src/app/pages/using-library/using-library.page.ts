@@ -24,7 +24,7 @@ export class UsingLibraryPage implements OnInit {
     {
       title: 'Ask a Librarian',
       description: 'Need help? Contact a librarian for support.',
-      link: '#', // Replace with real link when ready
+      link: 'https://cdn.sabinet.co.za/images/worldcatlocal/NLSA/asklibrarian.php',
       icon: 'chatbubbles-outline',
     },
     {
@@ -38,7 +38,7 @@ export class UsingLibraryPage implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    // Future logic can go here
+
   }
 
   openLink(url: string) {
