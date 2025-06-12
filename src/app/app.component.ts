@@ -6,7 +6,7 @@ import { MenuController } from '@ionic/angular';
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
-  standalone: false
+  standalone: false,
 })
 export class AppComponent {
   //slides: any[] = [];

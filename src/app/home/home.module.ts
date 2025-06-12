@@ -8,8 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { HeaderPageModule } from '../header/header.module';
 import { FooterPageModule } from '../footer/footer.module';
 import { SwiperComponent } from "../swiper/swiper.component";
-
-
+import { CardsComponent } from "../cards/cards.component";
 
 @NgModule({
   imports: [
@@ -19,7 +18,8 @@ import { SwiperComponent } from "../swiper/swiper.component";
     HomePageRoutingModule,
     HeaderPageModule,
     FooterPageModule,
-    SwiperComponent
+    SwiperComponent,
+    CardsComponent
 ],
   declarations: [HomePage]  
 })
