@@ -4,13 +4,24 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-nlsa-contact',
   templateUrl: './nlsa-contact.page.html',
   styleUrls: ['./nlsa-contact.page.scss'],
-  standalone : false,
+  standalone: false,
 })
 export class NlsaContactPage implements OnInit {
 
-  constructor() { }
+  contact = {
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  };
 
-  ngOnInit() {
+  constructor() {}
+
+  ngOnInit() {}
+
+  sendMessage() {
+    console.log('Form Submitted:', this.contact);
+    // TODO: Implement actual submission logic (e.g. API call)
   }
 
 }

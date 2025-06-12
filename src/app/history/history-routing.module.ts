@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { NlsaContactPage } from './nlsa-contact.page';
+import { HistoryPage } from './history.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: NlsaContactPage
-  },
+    component: HistoryPage
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class NlsaContactPageRoutingModule {}
+export class HistoryPageRoutingModule {}
