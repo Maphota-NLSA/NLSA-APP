@@ -1,0 +1,84 @@
+<ion-content [fullscreen]="true">
+
+<app-header></app-header>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Our Rich History</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+  <!-- Introduction Section -->
+  <ion-card>
+    <ion-card-content>
+      <p style="color: #202b5d;">
+        The National Library of South Africa (NLSA) is the custodian of South Africa’s collective
+        national heritage materials and the national depository of published output materials in
+        the country.
+      </p>
+      <br>
+      <p>
+        The NLSA is mandated by the National Library of South Africa Act to collect and preserve published documents and make them accessible to all and to ensure that knowledge is not lost to posterity. The National Library of South Africa, as we know it today, was formed on 1 November 1999 as a result of the amalgamation of the two former national libraries: the South African Library in Cape Town and the State Library in Pretoria. The collections of the NLSA contain a wealth of information, including rare manuscripts, books published in South Africa, periodicals, government publications, official foreign publications, maps, technical reports, Africana and newspapers.
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="image-row">
+  <img src="../../assets/library_1.jpg" alt="Library 1" />
+  <img src="../../assets/library_2.jpg" alt="Library 2" />
+</div>
+
+  <!-- Timeline Header -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title style="text-align: center;">See History Timeline</ion-card-title>
+      <ion-card-subtitle style="text-align: center;">
+        In 1818, Lord Charles Somerset, the Cape Colony's first<br>
+        civil Governor, issued a proclamation to control the wine trade,<br>imposing a tax on wine brought into Cape Town for sale.
+      </ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-list>
+    <ion-item style="height: auto;">
+      <ion-thumbnail slot="start">
+        <img src="../../assets/history_pic1.png" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>1818 - Formation</h2>
+        <p>Lord Charles Somerset issued a proclamation to control the wine trade. Proceeds funded a public library to lay the foundation for knowledge distribution in the Cape Colony.</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="../../assets/history_2.jpg" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>1954 - The State Library</h2>
+        <p>The State Library of the South African Republic was formed from a Dutch donation in 1883, contributing Dutch literature and religious works to the region.</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="../../assets/history_pic3.png" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>1997 - National Library Act</h2>
+        <p>The National Library Act No 92 of 1998 was enacted to establish complete collections of published South African documents and preserve them nationally.</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="../../assets/history_pic4.png" width="100px"/>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>2018 - Modern Consolidation</h2>
+        <p>Until 1999, South Africa had two national libraries. Legal deposit laws ensured preservation of every published South African document. These were merged under the National Library of South Africa.</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <app-footer></app-footer>
+  </ion-content>
