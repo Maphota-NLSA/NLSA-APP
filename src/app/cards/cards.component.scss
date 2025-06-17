@@ -36,6 +36,7 @@ img{
     height: auto;
 }
 
-.centerPara{
-    text-align: center;
+.title-wrapper {
+  display: flex;
+  justify-content: center;
 }
