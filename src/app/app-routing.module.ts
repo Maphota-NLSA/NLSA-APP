@@ -39,10 +39,6 @@ const routes: Routes = [
     loadChildren: () => import('./bibliographic-services/bibliographic-services.module').then( m => m.BibliographicServicesPageModule)
   },
   {
-    path: 'preservation-services',
-    loadChildren: () => import('./preservation-services/preservation-services.module').then( m => m.PreservationServicesPageModule)
-  },
-  {
     path: 'outreach',
     loadChildren: () => import('./outreach/outreach.module').then( m => m.OutreachPageModule)
   },
@@ -63,6 +59,10 @@ const routes: Routes = [
   },{
     path: 'history',
     loadChildren: () => import('./history/history.module').then( m => m.HistoryPageModule)
+  },
+  {
+    path: 'contact-us',
+    loadChildren: () => import('./contact-us/contact-us.module').then( m => m.ContactUsPageModule)
   },
    {
     path: '**',
