@@ -32,7 +32,7 @@ export class CardsComponent  implements OnInit {
     {
       title: 'Opportunities',
       description: 'Join our team/Conduct business with the NLSA.',
-      link: '/home',
+      link: '/opportunities',
       icon: 'briefcase',
     },
     {
