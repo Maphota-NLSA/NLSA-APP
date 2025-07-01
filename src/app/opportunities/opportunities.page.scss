@@ -1,0 +1,49 @@
+.main-content {
+  flex: 1,
+}
+.custom-card1 {
+  font-size: 0.875rem; 
+  // height: 100%;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 8px;
+}
+
+ion-card-header,
+ion-card-title,
+ion-card-content {
+  font-size: inherit;
+}
+
+.custom-col {
+  display: flex;
+}
+
+
+
+@media (max-width: 767px) {
+  .custom-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .custom-col {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+
+  ion-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  ion-card {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
