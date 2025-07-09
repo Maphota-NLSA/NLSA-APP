@@ -10,13 +10,7 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
-  {
-    path: 'using-library',
-    loadChildren: () =>
-      import('./pages/using-library/using-library.module').then(
-        m => m.UsingLibraryPageModule
-      )
-  },
+ 
   {
     path: '',
     redirectTo: 'home',
@@ -35,18 +29,6 @@ const routes: Routes = [
     loadChildren: () => import('./capetown-campus/capetown-campus.module').then( m => m.CapetownCampusPageModule)
   },
   {
-    path: 'bibliographic-services',
-    loadChildren: () => import('./bibliographic-services/bibliographic-services.module').then( m => m.BibliographicServicesPageModule)
-  },
-  {
-    path: 'outreach',
-    loadChildren: () => import('./outreach/outreach.module').then( m => m.OutreachPageModule)
-  },
-  {
-    path: 'information-access',
-    loadChildren: () => import('./information-access/information-access.module').then( m => m.InformationAccessPageModule)
-  },
-  {
     path: 'footer',
     loadChildren: () => import('./footer/footer.module').then( m => m.FooterPageModule)
   },
@@ -56,22 +38,28 @@ const routes: Routes = [
   },{
     path: 'nlsa-contact',
     loadChildren: () => import('./pages/nlsa-contact/nlsa-contact.module').then( m => m.NlsaContactPageModule)
-  },{
-    path: 'history',
-    loadChildren: () => import('./history/history.module').then( m => m.HistoryPageModule)
   },
   {
     path: 'contact-us',
     loadChildren: () => import('./contact-us/contact-us.module').then( m => m.ContactUsPageModule)
   },
   {
+<<<<<<< HEAD
     path: 'user-registration',
     loadChildren: () => import('./user-registration/user-registration.module').then( m => m.UserRegistrationPageModule)
+=======
+    path: 'opportunities',
+    loadChildren: () => import('./opportunities/opportunities.module').then( m => m.OpportunitiesPageModule)
+>>>>>>> e6c8d088d63366928e362df0cd0069175a66fe4e
   },
    {
     path: '**',
     redirectTo: 'home' // fallback for unknown paths
   },
+<<<<<<< HEAD
+=======
+  
+>>>>>>> e6c8d088d63366928e362df0cd0069175a66fe4e
 
 ];
 

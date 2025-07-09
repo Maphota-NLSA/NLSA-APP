@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { UsingLibraryPage } from './using-library.page';
+import { OpportunitiesPage } from './opportunities.page';
 
-describe('UsingLibraryPage', () => {
-  let component: UsingLibraryPage;
-  let fixture: ComponentFixture<UsingLibraryPage>;
+describe('OpportunitiesPage', () => {
+  let component: OpportunitiesPage;
+  let fixture: ComponentFixture<OpportunitiesPage>;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UsingLibraryPage);
+    fixture = TestBed.createComponent(OpportunitiesPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -31,8 +31,8 @@ export class CardsComponent  implements OnInit {
     },
     {
       title: 'Opportunities',
-      description: 'Join our Team/Conduct business with the NLSA.',
-      link: '/home',
+      description: 'Join our team/Conduct business with the NLSA.',
+      link: '/opportunities',
       icon: 'briefcase',
     },
     {
