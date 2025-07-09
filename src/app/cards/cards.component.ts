@@ -37,7 +37,7 @@ export class CardsComponent  implements OnInit {
     },
     {
       title: 'Contact Us',
-      description: 'Want to request an ISBN for your E-book?',
+      description: 'Connect with us',
       link: '/nlsa-contact', // Replace with real link when ready
       icon: 'albums',
     }

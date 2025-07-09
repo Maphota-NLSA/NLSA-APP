@@ -44,6 +44,9 @@ const routes: Routes = [
     loadChildren: () => import('./contact-us/contact-us.module').then( m => m.ContactUsPageModule)
   },
   {
+    path: 'user-registration',
+    loadChildren: () => import('./user-registration/user-registration.module').then( m => m.UserRegistrationPageModule)
+},{
     path: 'opportunities',
     loadChildren: () => import('./opportunities/opportunities.module').then( m => m.OpportunitiesPageModule)
   },
@@ -51,8 +54,6 @@ const routes: Routes = [
     path: '**',
     redirectTo: 'home' // fallback for unknown paths
   },
-  
-
 ];
 
 @NgModule({

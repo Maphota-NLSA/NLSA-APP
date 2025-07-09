@@ -11,26 +11,26 @@ export class ContactUsPage implements OnInit {
 
       cards = [
     {
-      title: 'Search the Catalogue',
-      description: 'Search through the NLSA Databases.',
+      title: 'NLSA Collections',
+      description: 'Search through the NLSA Catalogue.',
       link: 'https://nlsa.on.worldcat.org/discovery',
       icon: 'book',
     },
     {
       title: 'Digital Records',
-      description: 'Want to upload your E-book?.',
+      description: 'Search through our Digital records.',
       link: 'https://cdm21048.contentdm.oclc.org/digital',
       icon: 'briefcase',
     },
     {
       title: 'ISBN',
-      description: 'Want to request an ISBN for your E-book?',
+      description: 'Appl for your ISBN number',
       link: 'https://www.nlsa.ac.za/isbn/', // Replace with real link when ready
       icon: 'albums',
     },
     {
       title: 'Venue Hire',
-      description: 'Want to request an ISBN for your E-book?',
+      description: 'Want to book a venue? Click here to request a quotation',
       link: 'https://www.nlsa.ac.za/venue-hire/', // Replace with real link when ready
       icon: 'easel',
     },
