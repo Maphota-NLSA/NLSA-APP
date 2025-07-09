@@ -47,19 +47,18 @@ const routes: Routes = [
 <<<<<<< HEAD
     path: 'user-registration',
     loadChildren: () => import('./user-registration/user-registration.module').then( m => m.UserRegistrationPageModule)
-=======
+},{
     path: 'opportunities',
     loadChildren: () => import('./opportunities/opportunities.module').then( m => m.OpportunitiesPageModule)
->>>>>>> e6c8d088d63366928e362df0cd0069175a66fe4e
   },
    {
     path: '**',
     redirectTo: 'home' // fallback for unknown paths
   },
-<<<<<<< HEAD
-=======
+<<<<<<<<< Temporary merge branch 1
   
->>>>>>> e6c8d088d63366928e362df0cd0069175a66fe4e
+=========
+>>>>>>>>> Temporary merge branch 2
 
 ];
 
