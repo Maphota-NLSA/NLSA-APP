@@ -8,7 +8,7 @@ declare const google: any;
   styleUrls: ['./pretoria-campus.page.scss'],
   standalone: false,
 })
-export class PretoriaCampusPage implements OnInit,AfterViewInit  {
+export class PretoriaCampusPage implements OnInit  {
 
   schedule: {
     day: string;
@@ -29,7 +29,7 @@ export class PretoriaCampusPage implements OnInit,AfterViewInit  {
       { day: 'Wednesday ', hours: ': 8am-5pm', open: true },
       { day: 'Thursday ', hours: ': 8am-5pm', open: true },
       { day: 'Friday ', hours: ': 8am-5pm', open: true },
-      { day: 'WeekEnd ', hours: ': closed', open: false },
+      { day: 'Weekend ', hours: ': closed', open: false },
       { day: 'Public Holidays ', hours: ': closed', open: false },
     ] as {
       day: string;
@@ -61,30 +61,7 @@ export class PretoriaCampusPage implements OnInit,AfterViewInit  {
     });
   
     this.schedule = reordered;
-  }
-  ngAfterViewInit(): void {
-    (window as any).initMap = () => {
-      const pretoriaCampus = { lat: -25.74257756498549, lng: 28.189481728967614 };
-  
-      const map = new google.maps.Map(document.getElementById('map') as HTMLElement, {
-        center: pretoriaCampus,
-        zoom: 16,
-      });
-  
-      new google.maps.Marker({
-        position: pretoriaCampus,
-        map: map,
-        title: 'Pretoria Campus',
-      });
-    };
-  
-    if ((window as any).google && (window as any).google.maps) {
-      (window as any).initMap();
-    }
-
-  }
-  
-  
+  }  
 }
 
 

@@ -31,13 +31,13 @@ export class CardsComponent  implements OnInit {
     },
     {
       title: 'Opportunities',
-      description: 'Join our team/Conduct business with the NLSA.',
+      description: 'Join our Team/Conduct business with the NLSA.',
       link: '/home',
       icon: 'briefcase',
     },
     {
       title: 'Contact Us',
-      description: 'Want to request an ISBN for your E-book?',
+      description: 'Connect with us',
       link: '/nlsa-contact', // Replace with real link when ready
       icon: 'albums',
     }
