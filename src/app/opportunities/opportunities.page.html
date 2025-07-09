@@ -1,0 +1,42 @@
+<ion-content class="ion-padding">
+<app-header></app-header>
+
+ 
+
+  <ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Opportunities</ion-title>
+  </ion-toolbar>
+</ion-header>
+<div class="main-content">
+ <ion-grid>
+  <ion-row>
+    <ion-col
+      *ngFor="let card of cards.slice(0, 2)"
+      size="6"
+      class="ion-padding custom-col"
+    >
+      <ion-card class="custom-card1">
+        <ion-card-header>
+          <ion-card-title>
+            <ion-icon
+              [name]="card.icon"
+              class="card-icon"
+              slot="start"
+            ></ion-icon>
+            {{ card.title }}
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{ card.description }}
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+</div>
+
+ 
+<app-footer></app-footer> 
+</ion-content>
