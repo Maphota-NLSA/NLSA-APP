@@ -11,11 +11,7 @@
   <div class="card-wrapper">
 
     <ion-card class="custom-card">
-      <ion-card-header>
-        <ion-card-content>
-          <div id="map" style="height: 300px; width: 100%;"></div>
-        </ion-card-content> 
-      </ion-card-header>
+
       <ion-card-content>
         <ion-card-title style="text-align: center">Operating Hours</ion-card-title>
         <div *ngFor="let item of schedule">
@@ -56,14 +52,26 @@ Proof of identification is required to enter the library
       33°55’30.1"S 18°25’06.4"E
     </ion-card-content>
 
-    <ion-card-content class="email-container">
-      <ion-icon name="mail-outline" class="email-icon"></ion-icon>
-      <a href="mailto:info@nlsa.ac.za">Email: info&#64;nlsa.ac.za</a>
+    <ion-card-content>
+      <ion-button fill="outline" expand="block" href="https://maps.google.com/?q=5+Queen+Victoria+Street,+Cape+Town" target="_blank">Get Direction</ion-button>
     </ion-card-content>
-    <ion-card-content class="email-container">
-      <ion-icon name="call-outline" class="email-icon"></ion-icon>
-      <a href="tel:021 424 6320">021 424 6320</a>
+    
+    <ion-card-content>
+      62 Queen Victoria Street<br>
+      Cape Town<br>
+      8001<br>
+      South Africa
     </ion-card-content>
+
+    <ion-card-content>
+      GPS Co-ordinates<br>
+      33°55'31"S 18°25'07"E
+    </ion-card-content>
+
+    <ion-card-content>
+      <ion-button fill="outline" expand="block" href="https://maps.app.goo.gl/7H3zqdWQPaKGPjNW6" target="_blank">Get Direction</ion-button>
+    </ion-card-content>
+    
   </ion-card>
 
     </div> 

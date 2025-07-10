@@ -30,7 +30,7 @@ export class CapetownCampusPage implements OnInit {
       { day: 'Wednesday ', hours: ': 8am-5pm', open: true },
       { day: 'Thursday ', hours: ': 8am-5pm', open: true },
       { day: 'Friday ', hours: ': 8am-5pm', open: true },
-      { day: 'WeekEnd ', hours: ': closed', open: false },
+      { day: 'Weekend ', hours: ': closed', open: false },
       { day: 'Public Holidays ', hours: ': closed', open: false },
     ] as {
       day: string;
@@ -63,5 +63,5 @@ export class CapetownCampusPage implements OnInit {
   
     this.schedule = reordered;
   }
-  
+
 }

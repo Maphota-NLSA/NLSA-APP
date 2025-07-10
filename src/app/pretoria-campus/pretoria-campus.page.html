@@ -9,11 +9,7 @@
   <div class="card-wrapper">
 
     <ion-card class="custom-card">
-      <ion-card-header>
-        <ion-card-content>
-          <div id="map" style="height: 300px; width: 100%;"></div>
-        </ion-card-content> 
-      </ion-card-header>
+
       <ion-card-content>
         <ion-card-title style="text-align: center">Operating Hours</ion-card-title>
         <div *ngFor="let item of schedule">
@@ -55,15 +51,11 @@ Proof of identification is required to enter the library
       GPS Co-ordinates<br>
       25°44’34.0"S 28°11’22.0"E
     </ion-card-content>
-
-    <ion-card-content class="email-container">
-      <ion-icon name="mail-outline" class="email-icon"></ion-icon>
-      <a href="mailto:infodesk@nlsa.ac.za">Email: infodesk&#64;nlsa.ac.za</a>
+    
+    <ion-card-content>
+              <ion-button fill="outline" expand="block" href="https://maps.google.com/?q=75+Thabo+Sehume+Street,+Pretoria" target="_blank">Get Direction</ion-button>
     </ion-card-content>
-    <ion-card-content class="email-container">
-      <ion-icon name="call-outline" class="email-icon"></ion-icon>
-      <a href="tel:0124019700">012 401 9700</a>
-    </ion-card-content>
+    
   </ion-card>
 
     </div> 
