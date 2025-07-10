@@ -1,21 +1,22 @@
 <ion-content [fullscreen]="true">
-     <app-header></app-header>
+  <app-header></app-header>
 
-<ion-header >
-  <ion-toolbar color="primary">
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" icon="arrow-back-outline"></ion-back-button>
+    </ion-buttons>
     <ion-title>Services</ion-title>
   </ion-toolbar>
 </ion-header>
 
 
-
-<ion-grid>
+  <ion-grid>
     <ion-row class="ion-justify-content-center ion-align-items-stretch">
       <ion-col
         *ngFor="let card of cards"
         size="12"
         sizeMd="6"
-        sizeLg="4"
         class="ion-padding"
       >
         <ion-card (click)="openLink(card.link)" button color="light">
@@ -36,5 +37,6 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-<app-footer></app-footer>
+
+  <app-footer></app-footer>
 </ion-content>

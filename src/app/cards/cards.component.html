@@ -1,32 +1,22 @@
-<ion-content [fullscreen]="true">
-     <app-header></app-header>
-
 <ion-grid>
-    <ion-row class="ion-justify-content-center ion-align-items-stretch">
-      <ion-col
-        *ngFor="let card of cards"
-        size="12"
-        sizeMd="6"
-        sizeLg="4"
-        class="ion-padding"
-      >
-        <ion-card (click)="openLink(card.link)" button color="light">
-          <ion-card-header>
-            <ion-card-title>
-              <ion-icon
-                [name]="card.icon"
-                class="card-icon"
-                slot="start"
-              ></ion-icon>
-              {{ card.title }}
-            </ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            {{ card.description }}
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-<app-footer></app-footer>
-</ion-content>
+  <ion-row class="ion-justify-content-center ion-align-items-stretch">
+    <ion-col
+      *ngFor="let card of cards; let i = index"
+      size="12"
+      sizeMd="6"
+      class="ion-padding"
+    >
+      <ion-card (click)="openLink(card.link)" class="custom-card">
+        <ion-card-header>
+          <ion-card-title class="card-title title-color-{{i}}">
+            <ion-icon [name]="card.icon" class="card-icon"></ion-icon>
+            {{ card.title }}
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{ card.description }}
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
