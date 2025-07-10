@@ -46,7 +46,8 @@ const routes: Routes = [
   {
     path: 'user-registration',
     loadChildren: () => import('./user-registration/user-registration.module').then( m => m.UserRegistrationPageModule)
-},{
+  },
+  {
     path: 'opportunities',
     loadChildren: () => import('./opportunities/opportunities.module').then( m => m.OpportunitiesPageModule)
   },
