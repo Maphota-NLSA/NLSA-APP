@@ -13,7 +13,7 @@ import { Router } from '@angular/router'; // Import Router
 export class CardsComponent implements OnInit {
   constructor(private router: Router) {} // Injected Router
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   cards = [
     {

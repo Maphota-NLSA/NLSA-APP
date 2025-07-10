@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { IonHeader } from '@ionic/angular';
+import { HeaderPageModule } from "../header/header.module";
+import { FooterPageModule } from "../footer/footer.module";
 
 @Component({
-  selector: 'app-contact-us',
-  templateUrl: './contact-us.page.html',
-  styleUrls: ['./contact-us.page.scss'],
-  standalone: false,
+  selector: 'app-services',
+  templateUrl: './services.page.html',
+  styleUrls: ['./services.page.scss'],
+  standalone: false
 })
-export class ContactUsPage implements OnInit {
+export class ServicesPage implements OnInit {
 
-      cards = [
+   cards = [
     {
       title: 'Search the Catalogue ',
       description: 'Search through the NLSA Digital Collections.',
@@ -47,5 +48,6 @@ export class ContactUsPage implements OnInit {
       alert('Alert is not working as of now');
     }
   }
+
 
 }

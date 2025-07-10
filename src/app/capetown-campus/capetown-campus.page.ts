@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CapetownCampusPage implements OnInit {
 
-//  operation hours function
+  //  operation hours function
   schedule: {
     day: string;
     hours: string;
@@ -39,16 +39,16 @@ export class CapetownCampusPage implements OnInit {
       isToday?: boolean;
       status?: string;
     }[];
-    
-  
+
+
     // Adjust Sunday (0) and reorder
     const currentDayIndex = new Date().getDay(); // 0 = Sunday
     const today = currentDayIndex === 0 ? 6 : currentDayIndex - 1;
     const reordered = [...allDays.slice(today), ...allDays.slice(0, today)];
-  
+
     const now = new Date();
     const hour = now.getHours();
-  
+
     // Set default values for all
     reordered.forEach((item, index) => {
       item.isToday = index === 0;
@@ -60,7 +60,7 @@ export class CapetownCampusPage implements OnInit {
         item.status = '';
       }
     });
-  
+
     this.schedule = reordered;
   }
 
