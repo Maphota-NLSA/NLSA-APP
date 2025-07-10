@@ -48,9 +48,15 @@ const routes: Routes = [
     loadChildren: () => import('./opportunities/opportunities.module').then( m => m.OpportunitiesPageModule)
   },
    {
+    path: 'latest-news',
+    loadChildren: () => import('./latest-news/latest-news.module').then( m => m.LatestNewsPageModule)
+  },
+   {
     path: '**',
     redirectTo: 'home' // fallback for unknown paths
   },
+ 
+
   
 
 ];

@@ -20,7 +20,7 @@ export class CardsComponent  implements OnInit {
     {
       title: 'Latest News',
       description: 'Get the latest news from the NLSA',
-      link: 'https://www.nlsa.ac.za/venue-hire/', // Replace with real link when ready
+      link: '/latest-news', // Replace with real link when ready
       icon: 'easel',
     },{
 

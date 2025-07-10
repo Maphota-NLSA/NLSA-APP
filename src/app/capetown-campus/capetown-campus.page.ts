@@ -2,8 +2,6 @@
 import { Component, OnInit } from '@angular/core';
 
 
-declare const google: any;
-
 @Component({
   selector: 'app-capetown-campus',
   templateUrl: './capetown-campus.page.html',
@@ -12,6 +10,7 @@ declare const google: any;
 })
 export class CapetownCampusPage implements OnInit {
 
+//  operation hours function
   schedule: {
     day: string;
     hours: string;
@@ -64,26 +63,5 @@ export class CapetownCampusPage implements OnInit {
   
     this.schedule = reordered;
   }
-  ngAfterViewInit(): void {
-    (window as any).initMap = () => {
-      const CapeTownCampus = { lat: -33.92496695218038, lng:  18.41845422938891 };
   
-      const map = new google.maps.Map(document.getElementById('map') as HTMLElement, {
-        center: CapeTownCampus,
-        zoom: 16,
-      });
-  
-      new google.maps.Marker({
-        position: CapeTownCampus,
-        map: map,
-        title: 'Cape Town Campus',
-      });
-    };
-  
-    if ((window as any).google && (window as any).google.maps) {
-      (window as any).initMap();
-    }
-
-  }
-
 }

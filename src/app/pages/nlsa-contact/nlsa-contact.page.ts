@@ -21,7 +21,7 @@ export class NlsaContactPage implements OnInit {
 
   sendMessage() {
     console.log('Form Submitted:', this.contact);
-    // TODO: Implement actual submission logic (e.g. API call)
+    // TODO: Implement actual submission logic (e.g. API call)address(communications@nlsa.ac.za).
   }
 
 }

@@ -1,0 +1,51 @@
+
+<ion-content [fullscreen]="true">
+
+<app-header></app-header>
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Latest News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- latest news update list -->
+    
+<ion-list>
+  <ion-item *ngFor="let item of newsItems">
+    <ion-thumbnail slot="start">
+      <img [src]="item.image" />
+    </ion-thumbnail>
+    <ion-label>
+      <h2>{{ item.title }}</h2>
+      <p>{{ item.description }}</p>
+    </ion-label>
+  </ion-item>
+</ion-list>
+
+  
+<!-- Code to add new item to the list
+
+    <ion-card>
+  <ion-card-header>
+    <ion-card-title>Add News Item</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item>
+      <ion-label position="stacked">Title</ion-label>
+      <ion-input [(ngModel)]="newItem.title" placeholder="Enter title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Description</ion-label>
+      <ion-textarea [(ngModel)]="newItem.description" placeholder="Enter description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Image URL</ion-label>
+      <ion-input [(ngModel)]="newItem.image" placeholder="assets/image.png"></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="addNewsItem()">Add News</ion-button>
+  </ion-card-content>
+</ion-card> -->
+
+  
+  <app-footer></app-footer>
+  </ion-content>

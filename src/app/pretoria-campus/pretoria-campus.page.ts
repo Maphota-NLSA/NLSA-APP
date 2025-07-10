@@ -1,6 +1,5 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-declare const google: any;
 
 @Component({
   selector: 'app-pretoria-campus',
@@ -8,8 +7,9 @@ declare const google: any;
   styleUrls: ['./pretoria-campus.page.scss'],
   standalone: false,
 })
-export class PretoriaCampusPage implements OnInit,AfterViewInit  {
+export class PretoriaCampusPage implements OnInit  {
 
+//  operation hours function
   schedule: {
     day: string;
     hours: string;
@@ -61,27 +61,6 @@ export class PretoriaCampusPage implements OnInit,AfterViewInit  {
     });
   
     this.schedule = reordered;
-  }
-  ngAfterViewInit(): void {
-    (window as any).initMap = () => {
-      const pretoriaCampus = { lat: -25.74257756498549, lng: 28.189481728967614 };
-  
-      const map = new google.maps.Map(document.getElementById('map') as HTMLElement, {
-        center: pretoriaCampus,
-        zoom: 16,
-      });
-  
-      new google.maps.Marker({
-        position: pretoriaCampus,
-        map: map,
-        title: 'Pretoria Campus',
-      });
-    };
-  
-    if ((window as any).google && (window as any).google.maps) {
-      (window as any).initMap();
-    }
-
   }
   
   
