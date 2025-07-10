@@ -9,14 +9,14 @@ import { IonicModule } from '@ionic/angular';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports:[CommonModule, IonicModule ]
 })
-export class CardsComponent  implements OnInit {
+export class CardsComponent implements OnInit {
   routerLink: any;
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-        cards = [
+  cards = [
   {
     title: 'Latest News',
     description: 'Get the latest news from the NLSA',
@@ -27,7 +27,7 @@ export class CardsComponent  implements OnInit {
   {
     title: 'Services',
     description: 'Information on ISBN, Digital records, NLSA Collections, Venue Hire',
-    link: '/contact-us',
+    link: '/services',
     icon: 'book-outline',
     color: 'success'
   },
