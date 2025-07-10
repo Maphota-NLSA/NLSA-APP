@@ -1,42 +1,107 @@
 .content {
-    padding: 16px;
+  padding: 16px;
 }
 
-.content>mat-card {
-    width: 200px;
+.content > mat-card {
+  width: 200px;
 }
 
 :root {
-    --first-color: hsl(82, 60%, 28%);
-    --title-color: hsl(0, 0%, 15%);
-    --text-color: hsl(0, 0%, 35%);
-    --body-color: hsl(0, 0%, 95%);
-    --container-color: hsl(0, 0%, 100%);
-    --body-font: "Poppins", sans-serif;
-    --h2-font-size: 1.25rem;
-    --small-font-size: .813rem;
+  --first-color: hsl(82, 60%, 28%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --body-color: hsl(0, 0%, 95%);
+  --container-color: hsl(0, 0%, 100%);
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: 0.813rem;
 }
 
 @media screen and (min-width: 1120px) {
-    :root {
-        --h2-font-size: 1.5rem;
-        --small-font-size: .875rem;
-    }
+  :root {
+    --h2-font-size: 1.5rem;
+    --small-font-size: 0.875rem;
+  }
 }
 
 body {
-    font-family: var(--body-font);
-    background-color: var(--body-color);
-    color: var(--text-color);
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
 }
 
 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-.title-wrapper {
-    display: flex;
-    justify-content: center;
+/* ✅ Card Grid Layout */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* ✅ Card Styling */
+.custom-card {
+  background-color: var(--container-color);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  padding: 16px;
+}
+
+.custom-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ✅ Card Title Row */
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: var(--h2-font-size);
+  font-weight: 600;
+  padding: 6px 0;
+}
+
+/* ✅ Icon Inside Card */
+.card-icon {
+  font-size: 1.6rem;
+}
+
+/* ✅ Dynamic Title Colors */
+.title-color-0 {
+  color: red; /* Latest News */
+}
+
+.title-color-1 {
+  color: rgb(4, 232, 20); /* Services icon is red now */
+}
+
+.title-color-2 {
+  color: goldenrod; /* Opportunities */
+}
+
+.title-color-3 {
+  color: royalblue; /* Contact Us */
+}
+
+/* ✅ Responsive Tweaks */
+@media screen and (max-width: 767px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-icon {
+    font-size: 1.4rem;
+  }
 }

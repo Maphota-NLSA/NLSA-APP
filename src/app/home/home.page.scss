@@ -1,13 +1,11 @@
 #container {
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  margin: 40px auto;
+  padding: 0 16px;
+  max-width: 1200px;
 }
 
+/* Text Styling */
 #container strong {
   font-size: 20px;
   line-height: 26px;
@@ -16,27 +14,73 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-
   color: #8c8c8c;
-
   margin: 0;
 }
 
 #container a {
   text-decoration: none;
 }
+
 .logo {
   height: 40px;
   margin-left: 10px;
 }
-.centerHeader{
+
+.centerHeader,
+.centerPara,
+a {
   text-align: center;
 }
-.centerPara{
-  text-align: center;
+/* Top Banner / Hero Image Styling 
+.hero-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  max-height: 300px;  You can adjust this if you want a taller banner 
 }
 
-a {
-  text-decoration: none;
-  text-align: center;
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 0 0 12px 12px;
+}
+*/
+
+/* Enhanced Video Styling */
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  width: 80%;
+  max-width: 960px;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+  border-radius: 12px;
+}
+
+/* Smooth hover effect for cards */
+ion-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+ion-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
 }
