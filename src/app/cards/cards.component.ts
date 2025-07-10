@@ -27,7 +27,7 @@ export class CardsComponent implements OnInit {
   {
     title: 'Services',
     description: 'Information on ISBN, Digital records, NLSA Collections, Venue Hire',
-    link: '/contact-us',
+    link: '/services',
     icon: 'book-outline',
     color: 'success'
   },

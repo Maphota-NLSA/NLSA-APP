@@ -40,8 +40,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/nlsa-contact/nlsa-contact.module').then( m => m.NlsaContactPageModule)
   },
   {
-    path: 'contact-us',
-    loadChildren: () => import('./contact-us/contact-us.module').then( m => m.ContactUsPageModule)
+    path: 'services',
+    loadChildren: () => import('./services/services.module').then( m => m.ServicesPageModule)
   },
   {
     path: 'user-registration',
@@ -59,7 +59,6 @@ const routes: Routes = [
     path: '**',
     redirectTo: 'home' // fallback for unknown paths
   },
-
 ];
 
 @NgModule({
