@@ -1,28 +1,28 @@
 import { CommonModule } from '@angular/common';
-import {ChangeDetectionStrategy, Component, CUSTOM_ELEMENTS_SCHEMA, OnInit} from '@angular/core';
+import { ChangeDetectionStrategy, Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.scss'],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  imports:[CommonModule]
+  imports: [CommonModule]
 })
-export class CardsComponent  implements OnInit {
+export class CardsComponent implements OnInit {
   routerLink: any;
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-        cards = [
-    
+  cards = [
+
     {
       title: 'Latest News',
       description: 'Get the latest news from the NLSA',
       link: '/latest-news', // Replace with real link when ready
       icon: 'easel',
-    },{
+    }, {
 
       title: 'Services',
       description: 'Information on ISBN, Digital records, NLSA Collections, Venue Hire',
@@ -42,7 +42,7 @@ export class CardsComponent  implements OnInit {
       icon: 'albums',
     }
   ];
-    openLink(url: string) {
+  openLink(url: string) {
     if (url && url !== '#') {
       window.open(url, '_blank');
     } else {

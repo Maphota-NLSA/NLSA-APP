@@ -1,23 +1,13 @@
 <ion-content [fullscreen]="true">
-     <app-header></app-header>
+  <app-header></app-header>
 
-<ion-grid>
+  <ion-grid>
     <ion-row class="ion-justify-content-center ion-align-items-stretch">
-      <ion-col
-        *ngFor="let card of cards"
-        size="12"
-        sizeMd="6"
-        sizeLg="4"
-        class="ion-padding"
-      >
+      <ion-col *ngFor="let card of cards" size="12" sizeMd="6" sizeLg="4" class="ion-padding">
         <ion-card (click)="openLink(card.link)" button color="light">
           <ion-card-header>
             <ion-card-title>
-              <ion-icon
-                [name]="card.icon"
-                class="card-icon"
-                slot="start"
-              ></ion-icon>
+              <ion-icon [name]="card.icon" class="card-icon" slot="start"></ion-icon>
               {{ card.title }}
             </ion-card-title>
           </ion-card-header>
@@ -28,5 +18,5 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-<app-footer></app-footer>
+  <app-footer></app-footer>
 </ion-content>
