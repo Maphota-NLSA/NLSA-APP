@@ -1,6 +1,5 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-declare const google: any;
 
 @Component({
   selector: 'app-pretoria-campus',
@@ -10,6 +9,7 @@ declare const google: any;
 })
 export class PretoriaCampusPage implements OnInit  {
 
+//  operation hours function
   schedule: {
     day: string;
     hours: string;
@@ -62,6 +62,7 @@ export class PretoriaCampusPage implements OnInit  {
   
     this.schedule = reordered;
   }  
+
 }
 
 

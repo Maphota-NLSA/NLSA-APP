@@ -2,8 +2,6 @@
 import { Component, OnInit } from '@angular/core';
 
 
-declare const google: any;
-
 @Component({
   selector: 'app-capetown-campus',
   templateUrl: './capetown-campus.page.html',
@@ -12,6 +10,7 @@ declare const google: any;
 })
 export class CapetownCampusPage implements OnInit {
 
+//  operation hours function
   schedule: {
     day: string;
     hours: string;
@@ -64,4 +63,5 @@ export class CapetownCampusPage implements OnInit {
   
     this.schedule = reordered;
   }
+
 }
