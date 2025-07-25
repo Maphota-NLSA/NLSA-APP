@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 onSlideChange: any;
+isButtonVisible: any;
   constructor() {}
 
 }
