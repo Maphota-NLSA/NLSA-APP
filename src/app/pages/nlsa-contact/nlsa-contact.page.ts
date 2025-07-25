@@ -18,23 +18,26 @@ export class NlsaContactPage implements OnInit {
   ngOnInit() {}
 
   sendMessage() {
-    console.log('Form Submitted:', this.formData);
-
+   // console.log('Form Submitted:', this.formData);
     this.contactService.sendMessage(this.formData).subscribe
       ((res: any) => {
-    // this.contactService.addContactForm(this.contact).subscribe(
-    //   (      response: any) => {
-    //     console.log('Message sent successfully', response);
-    //     // Optionally reset the form or show a success message
-    //   },
-    //   error => {
-    //     console.error('Error sending message', error);
-    //     // Optionally show an error message
-    //   }
-    // );
     console.log(res);
     // TODO: Implement actual submission logic (e.g. API call)address(communications@nlsa.ac.za).
   })
-}
-
+  }
+  onSubmit() {
+    if (this.formData.name && this.formData.email && this.formData.subject && this.formData.message) {
+      this.sendMessage();
+      this.resetForm();
+    } else {
+      console.error('Form is invalid');
+    }
+  }
+  resetForm() {
+    this.formData = new ContactFormClass();
+    // Optionally, reset the form in the UI if using a template-driven form
+    const formElement = document.querySelector('form');
+    if (formElement) {
+      formElement.reset();
+  }}
 }

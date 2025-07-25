@@ -16,10 +16,6 @@ export class AppComponent {
     private router: Router,
     private menuCtrl: MenuController
   ) {
-    // this.http.get('http://127.0.0.1:8000/api/contactform/add').subscribe(data => {
-    //   this.data.push(data);
-    //   console.log(this.data);
-    // }, error => console.error(error));
   }
 
   openLink(url: string) {
