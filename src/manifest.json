@@ -1,0 +1,27 @@
+{
+    "gcm_sender_id": "692680829717",
+    "name": "NLSA App",
+    "short_name": "NLSA",
+    "description": "NLSA App for managing contacts and communications.",    
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "icons": {
+        "48": "assets/icon/icon.png",
+        "128": "assets/icon/icon.png"
+    },
+    "permissions": [
+        "storage",
+        "notifications",
+        "gcm"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ]
+}

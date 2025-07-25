@@ -22,22 +22,16 @@ export class NlsaContactPage implements OnInit {
     this.contactService.sendMessage(this.formData).subscribe
       ((res: any) => {
     console.log(res);
+    this.resetForm();
+    alert('Message sent successfully!');
     // TODO: Implement actual submission logic (e.g. API call)address(communications@nlsa.ac.za).
   })
-  }
-  onSubmit() {
-    if (this.formData.name && this.formData.email && this.formData.subject && this.formData.message) {
-      this.sendMessage();
-      this.resetForm();
-    } else {
-      console.error('Form is invalid');
-    }
-  }
+}
   resetForm() {
     this.formData = new ContactFormClass();
-    // Optionally, reset the form in the UI if using a template-driven form
-    const formElement = document.querySelector('form');
-    if (formElement) {
-      formElement.reset();
-  }}
+    // Optionally, reset the form state if using Angular forms
+    // this.contactForm.reset();  
+
+  }
+
 }
