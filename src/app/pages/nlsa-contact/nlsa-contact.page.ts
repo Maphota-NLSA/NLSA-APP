@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactformService } from 'src/app/App-services/contactform.service';
+import { ContactFormClass } from 'src/app/contact-form-class';
 
 @Component({
   selector: 'app-nlsa-contact',
@@ -8,20 +10,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NlsaContactPage implements OnInit {
 
-  contact = {
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  };
+  nlsacontact:any;
+  formData = new ContactFormClass();
 
-  constructor() {}
+  constructor(private contactService: ContactformService) {}
 
   ngOnInit() {}
 
   sendMessage() {
-    console.log('Form Submitted:', this.contact);
+    console.log('Form Submitted:', this.formData);
+
+    this.contactService.sendMessage(this.formData).subscribe
+      ((res: any) => {
+    // this.contactService.addContactForm(this.contact).subscribe(
+    //   (      response: any) => {
+    //     console.log('Message sent successfully', response);
+    //     // Optionally reset the form or show a success message
+    //   },
+    //   error => {
+    //     console.error('Error sending message', error);
+    //     // Optionally show an error message
+    //   }
+    // );
+    console.log(res);
     // TODO: Implement actual submission logic (e.g. API call)address(communications@nlsa.ac.za).
-  }
+  })
+}
 
 }

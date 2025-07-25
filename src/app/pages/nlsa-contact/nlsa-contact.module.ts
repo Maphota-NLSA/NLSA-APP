@@ -7,6 +7,9 @@ import { NlsaContactPageRoutingModule } from './nlsa-contact-routing.module';
 import { NlsaContactPage } from './nlsa-contact.page';
 import { FooterPageModule } from 'src/app/footer/footer.module';
 import { HeaderPageModule } from 'src/app/header/header.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ContactformService } from 'src/app/App-services/contactform.service';
+import { ContactFormClass } from 'src/app/contact-form-class';
 
 @NgModule({
   imports: [
