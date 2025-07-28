@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pretoria-campus.page.html',
   styleUrls: ['./pretoria-campus.page.scss'],
   standalone: false,
+  
 })
 export class PretoriaCampusPage implements OnInit  {
 
