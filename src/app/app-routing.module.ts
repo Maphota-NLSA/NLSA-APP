@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { NewsDetailsComponent } from './news-details/news-details.component';
 
 /**
  * Root application routes.
@@ -55,6 +56,10 @@ const routes: Routes = [
     path: 'latest-news',
     loadChildren: () => import('./latest-news/latest-news.module').then( m => m.LatestNewsPageModule)
   },
+  {
+  path: 'news-details/:id',
+  component: NewsDetailsComponent,
+},
    {
     path: '**',
     redirectTo: 'home' // fallback for unknown paths

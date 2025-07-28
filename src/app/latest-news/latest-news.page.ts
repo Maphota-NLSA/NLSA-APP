@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsService } from '../news_services/news.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-latest-news',
@@ -7,45 +10,25 @@ import { Component, OnInit } from '@angular/core';
   standalone: false,
 })
 export class LatestNewsPage implements OnInit {
- newsItems = [
-    {
-      title: '1818 - Formation',
-      description: 'Lord Charles Somerset issued a proclamation...',
-      image: '../../assets/history_pic1.png'
-    },
-    {
-      title: '1954 - The State Library',
-      description: 'The State Library of the South African Republic...',
-      image: '../../assets/history_2.jpg'
-    },
-    {
-      title: '1997 - National Library Act',
-      description: 'The National Library Act No 92 of 1998...',
-      image: '../../assets/history_pic3.png'
-    },
-    {
-      title: '2018 - Modern Consolidation',
-      description: 'Until 1999, South Africa had two national libraries...',
-      image: '../../assets/history_pic4.png'
-    }
-  ];
+ 
+newsItems: any[] = [];
 
-  newItem = {
-    title: '',
-    description: '',
-    image: ''
-  };
+  constructor(private newsService: NewsService, private router: Router) {}
 
-  addNewsItem() {
-    if (this.newItem.title && this.newItem.description && this.newItem.image) {
-      this.newsItems.push({ ...this.newItem });
-      this.newItem = { title: '', description: '', image: '' };
-    }
-  }
-
-  constructor() { }
+  openNewsDetails(id: number) {
+  this.router.navigate(['/news-details', id]);
+}
 
   ngOnInit() {
+    this.newsService.getNews().subscribe((
+      data: any[] )=> {
+        console.log('News data:', data);
+        this.newsItems = data;
+      },
+      error => {
+        console.error('Failed to load news', error);
+      }
+    );
   }
 
 }
