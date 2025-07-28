@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/latest-news"></ion-back-button>
+    </ion-buttons>
+    <ion-title>News Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="newsItem">
+  <ion-card>
+    <img [src]="'http://127.0.0.1:8000/storage/images/' + newsItem.Image" />
+
+
+    <ion-card-header>
+      <ion-card-title>{{ newsItem.Title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p [innerHTML]="formattedStory"></p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
