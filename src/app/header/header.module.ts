@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { HeaderPageRoutingModule } from './header-routing.module';
+import { LogService } from '../App-services/log.service';
 
 import { HeaderPage } from './header.page';
 

@@ -1,4 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
+import { LogService } from '../App-services/log.service';
 
 @Component({
   selector: 'app-user-registration',
@@ -9,9 +10,10 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 })
 export class UserRegistrationPage implements OnInit {
 
-  constructor() { }
+  constructor(private logService: LogService) { }
 
   ngOnInit() {
+    this.logService.log('Page viewed', 'User Registration Page');
   }
 
   userReg = {

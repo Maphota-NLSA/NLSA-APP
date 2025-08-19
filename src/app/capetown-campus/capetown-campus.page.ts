@@ -1,5 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
+import { LogService } from '../App-services/log.service';
 
 
 @Component({
@@ -21,7 +22,10 @@ export class CapetownCampusPage implements OnInit {
 
   isOpen: boolean = false;
   statusText: string = '';
-  constructor() { }
+  constructor(private logService: LogService) { 
+    // Log page visit
+    this.logService.log('Page viewed','Plan your visit - Capetown Campus');
+  }
 
   ngOnInit() {
   const allDays = [

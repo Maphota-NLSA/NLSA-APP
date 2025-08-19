@@ -1,0 +1,14 @@
+{
+  "emulators": {
+    "dataconnect": {
+      "dataDir": "dataconnect/.dataconnect/pgliteData"
+    }
+  },
+  "dataconnect": {
+    "source": "dataconnect"
+  },
+  "hosting": {
+    "public": "src",
+    "site": "nlsa-firebaseapp-2be72"
+  }
+}

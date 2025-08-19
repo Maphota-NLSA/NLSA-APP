@@ -1,5 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { HeaderPageModule } from "../header/header.module";
+import { LogService } from '../App-services/log.service';
 
 @Component({
   selector: 'app-swiper',
@@ -10,8 +11,10 @@ import { HeaderPageModule } from "../header/header.module";
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SwiperComponent  implements OnInit {
-  constructor() { }
+  constructor(private logService: LogService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.logService.log('Page viewed', 'Swiper Component');
+  }
 
 }
