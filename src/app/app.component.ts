@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
+import { LogService } from './App-services/log.service';
 
 @Component({
   selector: 'app-root',

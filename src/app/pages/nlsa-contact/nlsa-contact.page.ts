@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivityLoggerService } from 'src/app/App-services/activity-logger.service';
 import { ContactformService } from 'src/app/App-services/contactform.service';
+import { LogService } from 'src/app/App-services/log.service';
 import { ContactFormClass } from 'src/app/contact-form-class';
 
 @Component({
@@ -12,10 +14,14 @@ export class NlsaContactPage implements OnInit {
 
   nlsacontact:any;
   formData = new ContactFormClass();
+  // logger: any;
 
-  constructor(private contactService: ContactformService) {}
+  constructor(private contactService: ContactformService, private  logger: ActivityLoggerService, private logService: LogService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.logger.logActivity('page_view', { page: 'nlsa-contact' });
+    this.logService.log('Page viewed','Contact Us Page');
+  }
 
   sendMessage() {
    // console.log('Form Submitted:', this.formData);

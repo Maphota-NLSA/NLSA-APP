@@ -9,6 +9,8 @@ import { HeaderPageModule } from '../header/header.module';
 import { FooterPageModule } from '../footer/footer.module';
 import { SwiperComponent } from "../swiper/swiper.component";
 import { CardsComponent } from "../cards/cards.component";
+import { ActivityLoggerService } from '../App-services/activity-logger.service';
+import { LogService } from '../App-services/log.service';
 
 @NgModule({
   imports: [
@@ -21,6 +23,8 @@ import { CardsComponent } from "../cards/cards.component";
     SwiperComponent,
     CardsComponent
 ],
-  declarations: [HomePage]  
+  declarations: [HomePage],
+  providers: [LogService, ActivityLoggerService],
+  
 })
 export class HomePageModule {}

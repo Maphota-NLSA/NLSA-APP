@@ -6,11 +6,31 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { environment } from 'src/environments/environment.prod';
+
+// Import AngularFire modules
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
+import { AppFirebaseModule } from './app-firebase/app-firebase.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, RouterModule,  HttpClientModule],
+  imports: [
+    BrowserModule,
+    //AngularFireModule.initializeApp(environment.firebaseConfig),
+    //AngularFireAnalyticsModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    RouterModule,
+    HttpClientModule,
+  ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+    // Initialize Firebase Analytics if needed
+    // This can be done in the AppFirebaseModule instead
+  } 
+}
+

@@ -1,10 +1,27 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
 
+import { getAnalytics } from "@angular/fire/analytics";
+import { initializeApp } from "@angular/fire/app";
+
+// The list of file replacements can be found in `angular.json`.
 export const environment = {
-  production: false
+  production: false, 
+  // firebaseConfig: {
+  //   apiKey: 'AIzaSyBklOBwfiSURtNgRlOHDQVC9xLHTxhsBq8',
+  //   authDomain: 'nlsa-app.firebaseapp.com',
+  //   projectId: 'nlsa-app',
+  //   databaseURL: 'https://nlsa-app-default-rtdb.firebaseio.com',
+  //   storageBucket: 'nlsa-app.firebasestorage.app',
+  //   messagingSenderId: '692680829717',
+  //   appId: '1:692680829717:web:88c9901f07bf990026171c',
+  //   measurementId: 'G-2ZX5RGPVYN',
+  // }
 };
+
+// const app = initializeApp(environment.firebaseConfig);
+
+// const analytics = getAnalytics(app);
 
 /*
  * For easier debugging in development mode, you can import the following file

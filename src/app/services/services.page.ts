@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderPageModule } from "../header/header.module";
 import { FooterPageModule } from "../footer/footer.module";
+import { LogService } from '../App-services/log.service';
 
 @Component({
   selector: 'app-services',
@@ -36,9 +37,10 @@ export class ServicesPage implements OnInit {
       icon: 'easel',
     },
   ];
-  constructor() { }
+  constructor(private logService:LogService) { }
 
   ngOnInit() {
+    this.logService.log('Page viewed','Services Page');
   }
 
   openLink(url: string) {
