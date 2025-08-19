@@ -8,11 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { environment } from 'src/environments/environment.prod';
 
-// Import AngularFire modules
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
-import { AppFirebaseModule } from './app-firebase/app-firebase.module';
-
 @NgModule({
   declarations: [AppComponent],
   imports: [
