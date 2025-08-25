@@ -16,7 +16,7 @@ export class HeaderPage implements OnInit{
   constructor(private logService:LogService ) { }
 
   ngOnInit() {
-    this.logService.log('Page viewed', 'Header Page');
+    //this.logService.log('Page viewed', 'Header Page');
   }
   
 }
