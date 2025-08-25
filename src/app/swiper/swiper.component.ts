@@ -14,7 +14,7 @@ export class SwiperComponent  implements OnInit {
   constructor(private logService: LogService) { }
 
   ngOnInit() {
-    this.logService.log('Page viewed', 'Swiper Component');
+    //this.logService.log('Page viewed', 'Swiper Component');
   }
 
 }

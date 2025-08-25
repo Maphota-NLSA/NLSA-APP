@@ -15,7 +15,7 @@ export class CardsComponent implements OnInit {
   constructor(private router: Router, private logService: LogService) {} // Injected Router
 
   ngOnInit() { 
-    this.logService.log('Page viewed', 'Cards Component');
+    //this.logService.log('Page viewed', 'Cards Component');
   }
 
   cards = [
