@@ -55,10 +55,15 @@ const routes: Routes = [
     path: 'latest-news',
     loadChildren: () => import('./latest-news/latest-news.module').then( m => m.LatestNewsPageModule)
   },
+    {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
    {
     path: '**',
     redirectTo: 'home' // fallback for unknown paths
   },
+
 ];
 
 @NgModule({
