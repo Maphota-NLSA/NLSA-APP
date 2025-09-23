@@ -14,7 +14,7 @@ import { FooterPageModule } from '../footer/footer.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HttpClientModule,        // ✅ Added here
+    HttpClientModule,        
     LoginPageRoutingModule,
     HeaderPageModule,
     FooterPageModule

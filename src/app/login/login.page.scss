@@ -1,5 +1,5 @@
 .login-content {
-  --background: #f5f7fa; /* Light neutral background */
+  --background: #f5f7fa;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,7 +7,7 @@
 
 .login-container {
   width: 100%;
-  max-width: 400px; /* Keeps form compact */
+  max-width: 400px; 
   padding: 20px;
 }
 
@@ -20,7 +20,7 @@ ion-card-title {
   font-size: 1.3rem;
   font-weight: 600;
   text-align: center;
-  color: #003366; /* Dark blue for professionalism */
+  color: #003366;
 }
 
 ion-button.login-btn {
