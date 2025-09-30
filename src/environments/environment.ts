@@ -1,8 +1,8 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 
-import { getAnalytics } from "@angular/fire/analytics";
-import { initializeApp } from "@angular/fire/app";
+//import { getAnalytics } from "@angular/fire/analytics";
+//import { initializeApp } from "@angular/fire/app";
 
 // The list of file replacements can be found in `angular.json`.
 export const environment = {
