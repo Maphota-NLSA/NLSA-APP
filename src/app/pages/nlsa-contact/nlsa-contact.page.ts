@@ -3,6 +3,8 @@ import { ActivityLoggerService } from 'src/app/App-services/activity-logger.serv
 import { ContactformService } from 'src/app/App-services/contactform.service';
 import { LogService } from 'src/app/App-services/log.service';
 import { ContactFormClass } from 'src/app/contact-form-class';
+import { HttpClient } from '@angular/common/http';
+import { ToastController, LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-nlsa-contact',
@@ -16,7 +18,11 @@ export class NlsaContactPage implements OnInit {
   formData = new ContactFormClass();
   // logger: any;
 
-  constructor(private contactService: ContactformService, private  logger: ActivityLoggerService, private logService: LogService) {}
+  constructor(private contactService: ContactformService, private  logger: ActivityLoggerService, private logService: LogService,
+    private http: HttpClient,
+    private toastCtrl: ToastController,
+    private loadingCtrl: LoadingController
+  ) {}
 
   ngOnInit() {
     this.logger.logActivity('page_view', { page: 'nlsa-contact' });
