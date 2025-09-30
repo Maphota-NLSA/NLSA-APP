@@ -1,0 +1,89 @@
+:host {
+  ion-header {
+    --background: #fff;
+  }
+}
+
+.container {
+  padding: 16px;
+}
+
+/* KPI Row */
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.kpi-card {
+  border-radius: 10px;
+  --box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+
+  ion-card-header {
+    padding: 16px;
+  }
+
+  ion-card-content {
+    padding: 12px 16px 18px;
+    font-size: 13px;
+    color: #666;
+  }
+}
+
+.trend.positive {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.trend.negative {
+  color: #c62828;
+  font-weight: 600;
+}
+
+/* Charts row */
+.charts-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.chart-card {
+  border-radius: 10px;
+  --box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+
+  canvas {
+    width: 100% !important;
+    height: 140px !important;
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .kpi-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .charts-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.header-menu ion-button {
+  --color: #000; /* text color */
+  --background: transparent;
+  font-size: 16px;
+  text-transform: none;
+  margin-right: 18px;
+  font-weight: bold;
+}
+
+.header-menu ion-icon {
+  margin-right: 6px;
+  font-size: 30px;
+}
+
+.header-menu ion-button.active {
+  --color: #007bff;
+  font-weight: bold;
+}

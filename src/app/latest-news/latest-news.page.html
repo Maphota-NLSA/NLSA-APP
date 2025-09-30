@@ -13,7 +13,7 @@
 <ion-list>
   <ion-item *ngFor="let item of newsItems" (click)="openNewsDetails(item.id)">
     <ion-thumbnail slot="start">
-      <img [src]="item.Image" />
+      <img [src]="'http://localhost:8000/storage/news_images/' + item.Image"  />
     </ion-thumbnail>
     <ion-label>
       <h2>{{ item.Title }}</h2>
