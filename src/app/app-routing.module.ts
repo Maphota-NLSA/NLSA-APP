@@ -60,14 +60,29 @@ const routes: Routes = [
   path: 'news-details/:id',
   component: NewsDetailsComponent,
 },
-    {
+ {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+   {
+    path: 'newsupdate',
+    loadChildren: () => import('./admin/newsupdate/newsupdate.module').then( m => m.NewsupdatePageModule)
+  },
+  {
+    path: 'news-add',
+    loadChildren: () => import('./admin/news-add/news-add.module').then( m => m.NewsAddPageModule)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./admin/dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
    {
     path: '**',
     redirectTo: 'home' // fallback for unknown paths
   },
+  
+
+  
 
 ];
 
