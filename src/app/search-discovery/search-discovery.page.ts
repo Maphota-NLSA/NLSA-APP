@@ -1,5 +1,6 @@
 
   import { Component } from '@angular/core';
+import { LogService } from '../App-services/log.service';
 
 @Component({
   selector: 'app-search-discovery',
@@ -9,6 +10,10 @@
 
 })
 export class SearchDiscoveryPage {
+  constructor(private logService: LogService) {
+    this.logService.log('Page viewed', 'Search Discovery Page');
+  }
+
   searchQuery: string = '';
   showDropdown: boolean = false;
   dropdownHovered: boolean = false;

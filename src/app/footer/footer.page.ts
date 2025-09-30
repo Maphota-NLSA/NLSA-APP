@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LogService } from '../App-services/log.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterPage implements OnInit {
 
-  constructor() { }
+  constructor(private logService: LogService) { }
 
   ngOnInit() {
+    //this.logService.log('Page viewed', 'Footer Page');
   }
 
 }

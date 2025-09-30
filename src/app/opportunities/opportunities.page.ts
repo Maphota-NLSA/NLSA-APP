@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivityLoggerService } from '../App-services/activity-logger.service';
+import { LogService } from '../App-services/log.service';
 
 @Component({
   selector: 'app-opportunities',
@@ -23,9 +25,11 @@ cards = [
     
   ];
   
-  constructor() { }
+  constructor(private  logger: ActivityLoggerService, private logService: LogService) { }
 
   ngOnInit() {
+    this.logger.logActivity('page_view', { page: 'opportunities' });
+    this.logService.log('Page viewed','Opportunities Page');
   }
   
 openLink(url: string) {

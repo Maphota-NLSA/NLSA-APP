@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { NewsService } from '../news_services/news.service';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
+import { ActivityLoggerService } from '../App-services/activity-logger.service';
+import { LogService } from '../App-services/log.service';
 
 @Component({
   selector: 'app-news-details',
@@ -13,9 +15,12 @@ import { IonicModule } from '@ionic/angular';
 export class NewsDetailsComponent  implements OnInit {
 newsItem: any;
 public formattedStory: string = '';
+ 
   constructor(
     private route: ActivatedRoute,
-    private newsService: NewsService
+    private newsService: NewsService,
+    private logger: ActivityLoggerService, 
+    private logService: LogService
   ) {}
 
   ngOnInit() {
@@ -27,6 +32,9 @@ public formattedStory: string = '';
         this.formattedStory = this.newsItem.Story.replace(/\n/g, '<br>');
       });
     }
+
+    this.logger.logActivity('page_view', { page: 'latest-news' });
+    this.logService.log('Page viewed','News Details Page: ' + id);
   }
 
 }

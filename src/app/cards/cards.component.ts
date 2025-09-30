@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router'; // Import Router
+import { LogService } from '../App-services/log.service';
 
 @Component({
   selector: 'app-cards',
@@ -11,9 +12,11 @@ import { Router } from '@angular/router'; // Import Router
   imports: [CommonModule, IonicModule],
 })
 export class CardsComponent implements OnInit {
-  constructor(private router: Router) {} // Injected Router
+  constructor(private router: Router, private logService: LogService) {} // Injected Router
 
-  ngOnInit() { }
+  ngOnInit() { 
+    //this.logService.log('Page viewed', 'Cards Component');
+  }
 
   cards = [
     {
