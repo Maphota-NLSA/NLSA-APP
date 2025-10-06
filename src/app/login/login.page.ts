@@ -34,7 +34,7 @@ export class LoginPage implements OnInit {
         toast.present();
 
         // Navigate to admin dashboard after successful login "testing"
-        this.navCtrl.navigateForward('/opportunities');
+        this.navCtrl.navigateForward('/dashboard');
       },
       async err => {
         const toast = await this.toastCtrl.create({
