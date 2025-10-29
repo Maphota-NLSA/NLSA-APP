@@ -1,14 +1,14 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/newsupdate" icon="arrow-back-outline"></ion-back-button>
+      <ion-back-button defaultHref="/notifications-add" icon="arrow-back-outline"></ion-back-button>
     </ion-buttons>
-    <ion-title>Add News</ion-title>
+    <ion-title> Add Notifications</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  
+ 
   <form (ngSubmit)="onSubmit()" #newsForm="ngForm" enctype="multipart/form-data">
 
     <!-- Title -->
@@ -27,12 +27,6 @@
     <ion-item>
       <ion-label position="stacked">Image</ion-label>
       <input type="file" (change)="onFileChange($event)" name="Image" required />
-    </ion-item>
-
-    <!-- Story -->
-    <ion-item>
-      <ion-label position="floating">Story</ion-label>
-      <ion-textarea [(ngModel)]="formData.Story" name="Story" required></ion-textarea>
     </ion-item>
 
     <!-- Submit Button -->

@@ -1,3 +1,4 @@
+  <!-- Menu -->
   <ion-header>
   <ion-toolbar>
 
@@ -30,39 +31,34 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
+<!-- page header -->
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>News Update</ion-title>
+    <ion-title>Home Image Update</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+   <p>Current Image on home screen</p>
+  <img *ngIf="image?.Image" [src]="'http://localhost:8000/storage/news_images/' + image.Image" alt="">
 
-   <ion-list>
-  <ion-item *ngFor="let item of newsItems">
-    <ion-thumbnail slot="start">
-      <img [src]="'http://localhost:8000/storage/news_images/' + item.Image" />
-    </ion-thumbnail>
+  <!-- Form -->
+   <form (ngSubmit)="onSubmit()" #newsForm="ngForm" enctype="multipart/form-data">
 
-    <ion-label>
-      <h2>{{ item.Title }}</h2>
-      <p>{{ item.Description }}</p>
-    </ion-label>
+    <!-- Image -->
+    <ion-item>
+      <ion-label position="stacked">Upload New Image</ion-label>
+      <input type="file" (change)="onFileChange($event)" name="Image" required />
+    </ion-item>
 
-    <ion-buttons slot="end">
-      <ion-button color="danger" (click)="deleteNews(item.id)">
-        <ion-icon name="trash-outline"></ion-icon>
-        Delete
-      </ion-button>
-    </ion-buttons>
-  </ion-item>
-</ion-list>
-
+    <!-- Submit Button -->
 <div class="btn-container">
-  <ion-button routerLink="/news-add" routerDirection="root" class="add-news-btn">
-    ADD NEWS 
+  
+    <ion-button expand="block" type="submit" [disabled]="!newsForm.form.valid" class="add-news-btn" routerLink="/home-image-update" routerDirection="root">
+    UPDATE IMAGE 
     <ion-icon name="add-circle-outline"></ion-icon>
   </ion-button>
 </div>
-
+  </form>
 </ion-content>
