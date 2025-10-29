@@ -76,10 +76,28 @@ const routes: Routes = [
     path: 'dashboard',
     loadChildren: () => import('./admin/dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
+  {
+    path: 'notifications-update',
+    loadChildren: () => import('./admin/notifications-update/notifications-update.module').then( m => m.NotificationsUpdatePageModule)
+  },
+  {
+    path: 'home-image-update',
+    loadChildren: () => import('./admin/home-image-update/home-image-update.module').then( m => m.HomeImageUpdatePageModule)
+  },
+  {
+    path: 'notifications-add',
+    loadChildren: () => import('./admin/notifications-add/notifications-add.module').then( m => m.NotificationsAddPageModule)
+  },
    {
     path: '**',
     redirectTo: 'home' // fallback for unknown paths
   },
+  
+
+  
+
+  
+
   
 
   

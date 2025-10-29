@@ -30,27 +30,30 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>News Update</ion-title>
+    <ion-title>Notifications Update</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
-   <ion-list>
-  <ion-item *ngFor="let item of newsItems">
+  <ion-list>
+  <ion-item *ngFor="let item of notifications">
     <ion-thumbnail slot="start">
-      <img [src]="'http://localhost:8000/storage/news_images/' + item.Image" />
+     <img [src]="'http://localhost:8000/storage/news_images/' + item.Image" />
     </ion-thumbnail>
 
     <ion-label>
-      <h2>{{ item.Title }}</h2>
+      <h2>
+        <h2>{{ item.Title }}</h2>
       <p>{{ item.Description }}</p>
+      </h2>
+      <p></p>
     </ion-label>
 
     <ion-buttons slot="end">
-      <ion-button color="danger" (click)="deleteNews(item.id)">
+      <ion-button color="danger" >
         <ion-icon name="trash-outline"></ion-icon>
         Delete
       </ion-button>
@@ -59,8 +62,8 @@
 </ion-list>
 
 <div class="btn-container">
-  <ion-button routerLink="/news-add" routerDirection="root" class="add-news-btn">
-    ADD NEWS 
+  <ion-button routerLink="/notifications-update" routerDirection="root" class="add-news-btn">
+    ADD NOTIFICATION 
     <ion-icon name="add-circle-outline"></ion-icon>
   </ion-button>
 </div>
