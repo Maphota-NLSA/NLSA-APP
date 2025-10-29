@@ -60,10 +60,48 @@ const routes: Routes = [
   path: 'news-details/:id',
   component: NewsDetailsComponent,
 },
+ {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+   {
+    path: 'newsupdate',
+    loadChildren: () => import('./admin/newsupdate/newsupdate.module').then( m => m.NewsupdatePageModule)
+  },
+  {
+    path: 'news-add',
+    loadChildren: () => import('./admin/news-add/news-add.module').then( m => m.NewsAddPageModule)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./admin/dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'notifications-update',
+    loadChildren: () => import('./admin/notifications-update/notifications-update.module').then( m => m.NotificationsUpdatePageModule)
+  },
+  {
+    path: 'home-image-update',
+    loadChildren: () => import('./admin/home-image-update/home-image-update.module').then( m => m.HomeImageUpdatePageModule)
+  },
+  {
+    path: 'notifications-add',
+    loadChildren: () => import('./admin/notifications-add/notifications-add.module').then( m => m.NotificationsAddPageModule)
+  },
    {
     path: '**',
     redirectTo: 'home' // fallback for unknown paths
   },
+  
+
+  
+
+  
+
+  
+
+  
+
 ];
 
 @NgModule({

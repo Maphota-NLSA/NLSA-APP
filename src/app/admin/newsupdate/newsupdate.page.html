@@ -1,0 +1,68 @@
+  <ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start" size="large" class="header-menu">
+      <ion-button routerLink="/dashboard" routerDirection="root">
+        <ion-icon name="grid-outline" slot="start"></ion-icon>
+        Dashboard
+      </ion-button>
+
+      <ion-button routerLink="/newsupdate" routerDirection="root">
+        <ion-icon name="newspaper-outline" slot="start"  ></ion-icon>
+        News Update
+      </ion-button>
+
+      <ion-button routerLink="/home-image-update" routerDirection="root">
+        <ion-icon name="image-outline" slot="start"></ion-icon>
+        Image Update
+      </ion-button>
+
+      <ion-button routerLink="/notifications-add" routerDirection="root">
+        <ion-icon name="notifications-outline" slot="start"></ion-icon>
+        Notifications Uplaod
+      </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end" class="header-menu">
+      <ion-button>
+  <ion-icon name="log-out-outline" slot="start"></ion-icon>
+  Log Out
+</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>News Update</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+   <ion-list>
+  <ion-item *ngFor="let item of newsItems">
+    <ion-thumbnail slot="start">
+      <img [src]="'http://localhost:8000/storage/news_images/' + item.Image" />
+    </ion-thumbnail>
+
+    <ion-label>
+      <h2>{{ item.Title }}</h2>
+      <p>{{ item.Description }}</p>
+    </ion-label>
+
+    <ion-buttons slot="end">
+      <ion-button color="danger" (click)="deleteNews(item.id)">
+        <ion-icon name="trash-outline"></ion-icon>
+        Delete
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
+</ion-list>
+
+<div class="btn-container">
+  <ion-button routerLink="/news-add" routerDirection="root" class="add-news-btn">
+    ADD NEWS 
+    <ion-icon name="add-circle-outline"></ion-icon>
+  </ion-button>
+</div>
+
+</ion-content>

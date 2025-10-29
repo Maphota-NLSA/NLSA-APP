@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/newsupdate" icon="arrow-back-outline"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <form (ngSubmit)="onSubmit()" #newsForm="ngForm" enctype="multipart/form-data">
+
+    <!-- Title -->
+    <ion-item>
+      <ion-label position="floating">Title</ion-label>
+      <ion-input type="text" [(ngModel)]="formData.Title" name="Title" required></ion-input>
+    </ion-item>
+
+    <!-- Description -->
+    <ion-item>
+      <ion-label position="floating">Description</ion-label>
+      <ion-textarea [(ngModel)]="formData.Description" name="Description" required></ion-textarea>
+    </ion-item>
+
+    <!-- Image -->
+    <ion-item>
+      <ion-label position="stacked">Image</ion-label>
+      <input type="file" (change)="onFileChange($event)" name="Image" required />
+    </ion-item>
+
+    <!-- Story -->
+    <ion-item>
+      <ion-label position="floating">Story</ion-label>
+      <ion-textarea [(ngModel)]="formData.Story" name="Story" required></ion-textarea>
+    </ion-item>
+
+    <!-- Submit Button -->
+    <div class="btn-container">
+  
+    <ion-button expand="block" type="submit" [disabled]="!newsForm.form.valid" class="add-news-btn" >
+    SUBMIT 
+    <ion-icon name="add-circle-outline"></ion-icon>
+  </ion-button>
+</div>
+
+  </form>
+  
+</ion-content>

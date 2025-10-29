@@ -1,0 +1,64 @@
+  <!-- Menu -->
+  <ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start" size="large" class="header-menu">
+      <ion-button routerLink="/dashboard" routerDirection="root">
+        <ion-icon name="grid-outline" slot="start"></ion-icon>
+        Dashboard
+      </ion-button>
+
+      <ion-button routerLink="/newsupdate" routerDirection="root">
+        <ion-icon name="newspaper-outline" slot="start"  ></ion-icon>
+        News Update
+      </ion-button>
+
+      <ion-button routerLink="/home-image-update" routerDirection="root">
+        <ion-icon name="image-outline" slot="start"></ion-icon>
+        Image Update
+      </ion-button>
+
+      <ion-button routerLink="/notifications-add" routerDirection="root">
+        <ion-icon name="notifications-outline" slot="start"></ion-icon>
+        Notifications Uplaod
+      </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end" class="header-menu">
+      <ion-button>
+  <ion-icon name="log-out-outline" slot="start"></ion-icon>
+  Log Out
+</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!-- page header -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Home Image Update</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+   <p>Current Image on home screen</p>
+  <img *ngIf="image?.Image" [src]="'http://localhost:8000/storage/news_images/' + image.Image" alt="">
+
+  <!-- Form -->
+   <form (ngSubmit)="onSubmit()" #newsForm="ngForm" enctype="multipart/form-data">
+
+    <!-- Image -->
+    <ion-item>
+      <ion-label position="stacked">Upload New Image</ion-label>
+      <input type="file" (change)="onFileChange($event)" name="Image" required />
+    </ion-item>
+
+    <!-- Submit Button -->
+<div class="btn-container">
+  
+    <ion-button expand="block" type="submit" [disabled]="!newsForm.form.valid" class="add-news-btn" routerLink="/home-image-update" routerDirection="root">
+    UPDATE IMAGE 
+    <ion-icon name="add-circle-outline"></ion-icon>
+  </ion-button>
+</div>
+  </form>
+</ion-content>
