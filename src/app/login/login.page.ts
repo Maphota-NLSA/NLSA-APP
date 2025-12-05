@@ -18,7 +18,13 @@ export class LoginPage implements OnInit {
     private toastCtrl: ToastController
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    // If already logged in, skip login page
+    const isLoggedIn = localStorage.getItem('adminLoggedIn');
+    if (isLoggedIn) {
+      this.navCtrl.navigateRoot('/dashboard');
+    }
+  }
 
   login() {
     this.http.post('http://127.0.0.1:8000/api/admin/login', {
@@ -33,8 +39,11 @@ export class LoginPage implements OnInit {
         });
         toast.present();
 
-        // Navigate to admin dashboard after successful login "testing"
-        this.navCtrl.navigateForward('/dashboard');
+        // 🔐 Save session so admin stays logged in
+        localStorage.setItem('adminLoggedIn', 'true');
+
+        // Redirect to dashboard
+        this.navCtrl.navigateRoot('/dashboard');
       },
       async err => {
         const toast = await this.toastCtrl.create({
