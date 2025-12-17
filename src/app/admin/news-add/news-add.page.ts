@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from 'src/app/news_services/news.service';
+import { LogService } from 'src/app/App-services/log.service';
 
 @Component({
   selector: 'app-news-add',
@@ -26,7 +27,7 @@ export class NewsAddPage implements OnInit {
   }
 }
 
-  constructor(private NewsService: NewsService) {}
+  constructor(private NewsService: NewsService, private logService: LogService) {}
 
   onSubmit() {
     const formPayload = new FormData();
@@ -62,8 +63,8 @@ export class NewsAddPage implements OnInit {
     }
   }
 
-
   ngOnInit() {
+    this.logService.log('Page viewed','Add Latest News Updates Page');
   }
 
 }

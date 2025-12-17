@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from 'src/app/news_services/news.service';
+import { LogService } from 'src/app/App-services/log.service';
 
 @Component({
   selector: 'app-home-image-update',
@@ -24,7 +25,7 @@ export class HomeImageUpdatePage implements OnInit {
   }
 }
 
-  constructor(private NewsService: NewsService) {}
+  constructor(private NewsService: NewsService, private logService: LogService) {}
 
   onSubmit() {
     const formPayload = new FormData();
@@ -55,6 +56,7 @@ export class HomeImageUpdatePage implements OnInit {
   }
 
   ngOnInit():void {
+    this.logService.log('Page viewed','Home Page Picture Update Page');
     this.NewsService.getImage().subscribe((
       data: any )=> {
         this.image = data;

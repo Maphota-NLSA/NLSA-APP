@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// Update the import path if log.service.ts is located elsewhere, for example:
+import { LogService } from '../../App-services/log.service';
 import { NavController } from '@ionic/angular';
 
 @Component({
@@ -9,6 +11,10 @@ import { NavController } from '@ionic/angular';
 })
 export class DashboardPage implements OnInit {
 
+  constructor(private logService: LogService) { }
+
+  ngOnInit() {
+    this.logService.log('Page viewed','Administartor dashboard Page');
   constructor(
     private navCtrl: NavController
   ) {}
