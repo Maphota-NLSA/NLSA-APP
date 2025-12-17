@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NavController, ToastController } from '@ionic/angular';
+import { LogService } from '../App-services/log.service';
 
 @Component({
   selector: 'app-login',
@@ -15,10 +16,13 @@ export class LoginPage implements OnInit {
   constructor(
     private http: HttpClient,
     private navCtrl: NavController,
-    private toastCtrl: ToastController
+    private toastCtrl: ToastController,
+    private logService: LogService
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.logService.log('Page viewed','Administrator Login Page');
+  }
 
   login() {
     this.http.post('http://127.0.0.1:8000/api/admin/login', {

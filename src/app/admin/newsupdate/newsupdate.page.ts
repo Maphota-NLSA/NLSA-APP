@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from 'src/app/news_services/news.service';
+import { LogService } from 'src/app/App-services/log.service';
 
 @Component({
   selector: 'app-newsupdate',
@@ -10,11 +11,14 @@ import { NewsService } from 'src/app/news_services/news.service';
 export class NewsupdatePage implements OnInit {
 
   newsItems: any[] = [];
-
-  constructor(private NewsService: NewsService) {}
+  constructor(
+    private newsService: NewsService,
+    private logService: LogService
+  ) {}
 
   ngOnInit() {
-  this.NewsService.getNews().subscribe((
+    this.logService.log('Page viewed','News Updates Page');
+    this.newsService.getNews().subscribe((
       data: any[] )=> {
         console.log('News data:', data);
         this.newsItems = data;
@@ -29,13 +33,12 @@ export class NewsupdatePage implements OnInit {
   deleteNews(id: number) {
     if (!confirm('Are you sure you want to delete this news?')) return;
 
-  this.NewsService.deleteNews(id).subscribe({
-    next: (res) => {
-      console.log(res.message || 'News deleted successfully');
-      
-    },
-    error: (err) => console.error(err)
-  });
+    this.newsService.deleteNews(id).subscribe({
+      next: (res) => {
+        console.log(res.message || 'News deleted successfully');
+      },
+      error: (err) => console.error(err)
+    });
   }
 
 }

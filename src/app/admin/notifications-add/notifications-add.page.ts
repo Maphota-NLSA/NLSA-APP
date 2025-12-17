@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from 'src/app/news_services/news.service';
+import { LogService } from 'src/app/App-services/log.service';
 
 @Component({
   selector: 'app-notifications-add',
@@ -10,20 +11,21 @@ import { NewsService } from 'src/app/news_services/news.service';
 export class NotificationsAddPage implements OnInit {
  notifications: any[] = [];
 
-  constructor(private newsService: NewsService) {}
+constructor(private newsService: NewsService, private logService: LogService) {}
 
-  ngOnInit() {
+ngOnInit() {
+  this.logService.log('Page viewed','Notifications Add Page');
   this.newsService.getnotification().subscribe((
-      data: any[] )=> {
-        console.log('Notification data:', data);
-        this.notifications = data;
-      },
-      error => {
-        console.error('Failed to load news', error);
-      }
-    );
+    data: any[] )=> {
+      console.log('Notification data:', data);
+      this.notifications = data;
+    },
+    error => {
+      console.error('Failed to load news', error);
+    }
+  );
 
-  }
+}
 
   deleteNews(id: number) {
     if (!confirm('Are you sure you want to delete this news?')) return;
