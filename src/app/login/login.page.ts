@@ -22,6 +22,11 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
     this.logService.log('Page viewed','Administrator Login Page');
+    // If already logged in, skip login page
+    const isLoggedIn = localStorage.getItem('adminLoggedIn');
+    if (isLoggedIn) {
+      this.navCtrl.navigateRoot('/dashboard');
+    }
   }
 
   login() {
@@ -37,8 +42,11 @@ export class LoginPage implements OnInit {
         });
         toast.present();
 
-        // Navigate to admin dashboard after successful login "testing"
-        this.navCtrl.navigateForward('/dashboard');
+        // 🔐 Save session so admin stays logged in
+        localStorage.setItem('adminLoggedIn', 'true');
+
+        // Redirect to dashboard
+        this.navCtrl.navigateRoot('/dashboard');
       },
       async err => {
         const toast = await this.toastCtrl.create({
